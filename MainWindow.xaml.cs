@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CAFEHOLIC.dao;
 
 namespace CAFEHOLIC
 {
@@ -18,6 +19,8 @@ namespace CAFEHOLIC
     {
         public MainWindow()
         {
+            CustomerDAO customerDAO = new CustomerDAO(new DBContext());
+            customerDAO.TestConnectionWithMessage();
             InitializeComponent();
         }
     }
