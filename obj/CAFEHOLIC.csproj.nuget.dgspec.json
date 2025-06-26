@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT_SU25\\prn212\\CAFEHOLIC\\CAFEHOLIC.csproj": {}
+    "C:\\Users\\Thanh Loc\\source\\repos\\cafeholic-app\\CAFEHOLIC.csproj": {}
   },
   "projects": {
-    "D:\\FPT_SU25\\prn212\\CAFEHOLIC\\CAFEHOLIC.csproj": {
+    "C:\\Users\\Thanh Loc\\source\\repos\\cafeholic-app\\CAFEHOLIC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT_SU25\\prn212\\CAFEHOLIC\\CAFEHOLIC.csproj",
+        "projectUniqueName": "C:\\Users\\Thanh Loc\\source\\repos\\cafeholic-app\\CAFEHOLIC.csproj",
         "projectName": "CAFEHOLIC",
-        "projectPath": "D:\\FPT_SU25\\prn212\\CAFEHOLIC\\CAFEHOLIC.csproj",
-        "packagesPath": "C:\\Users\\winhtuan\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT_SU25\\prn212\\CAFEHOLIC\\obj\\",
+        "projectPath": "C:\\Users\\Thanh Loc\\source\\repos\\cafeholic-app\\CAFEHOLIC.csproj",
+        "packagesPath": "C:\\Users\\Thanh Loc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Thanh Loc\\source\\repos\\cafeholic-app\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\winhtuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Thanh Loc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -66,6 +66,30 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[6.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Serilog.Extensions.Logging.File": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             }
           },
           "imports": [

@@ -1,0 +1,14 @@
+2025-06-26T08:34:53.2058458+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "hajshdaksjd" (350afed2)
+2025-06-26T08:34:53.2069797+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-26T08:34:53.3552900+07:00  [ERR] Lỗi khi kiểm tra đăng nhập. (3af8bf4c)
+System.InvalidOperationException: The connection was not closed. The connection's current state is open.
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at CAFEHOLIC.DAO.AccountDAO.CheckLogin(String username, String password) in C:\Users\Thanh Loc\source\repos\cafeholic-app\DAO\AccountDAO.cs:line 27
+2025-06-26T08:35:36.4953629+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "asdasda" (350afed2)
+2025-06-26T08:35:36.4964618+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-26T08:37:10.4640101+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "0123456781" (350afed2)
+2025-06-26T08:37:10.4651749+07:00  [INF] Mật khẩu đã được cung cấp: "hash1" (14189866)
+2025-06-26T08:37:10.5582878+07:00  [INF] Đang thực hiện truy vấn đăng nhập... (358ad79d)
