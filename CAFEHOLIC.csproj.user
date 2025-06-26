@@ -2,7 +2,10 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
-    <Compile Update="view\Authentication.xaml.cs">
+    <Compile Update="view\ForgotPassword.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Register.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

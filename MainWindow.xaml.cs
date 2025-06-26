@@ -11,6 +11,7 @@ using System.Windows.Shapes;
 using CAFEHOLIC.dao;
 using CAFEHOLIC.DAO;
 using CAFEHOLIC.Model;
+using CAFEHOLIC.view;
 
 namespace CAFEHOLIC
 {
@@ -43,15 +44,38 @@ namespace CAFEHOLIC
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Account acc= accDAO.CheckLogin(txtUsername.Text, txtPassword.Password);
+            Account acc = accDAO.CheckLogin(txtUsername.Text, txtPassword.Password);
             if (acc != null)
             {
-                MessageBox.Show("Đăng nhập thành công!", "Thông báo");
+                MessageBox.Show("Login success", "Notify");
             }
             else
             {
                 MessageBox.Show("Đăng nhập thất bại! Vui lòng kiểm tra lại thông tin đăng nhập.", "Lỗi");
             }
         }
+
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+
+            var registerWindow = new Register(accDAO);
+            registerWindow.Owner = this;
+            registerWindow.ShowDialog();
+
+            this.Show();
+        }
+
+        private void btnForgotPassword_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+
+            var frogotWindow = new ForgotPassword(accDAO);
+            frogotWindow.Owner = this;
+            frogotWindow.ShowDialog();
+
+            this.Show();
+        }
+
     }
 }

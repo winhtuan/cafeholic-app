@@ -79,19 +79,50 @@
                     </StackPanel>
                     <StackPanel Margin="10" HorizontalAlignment="Center">
                         <Button
-                            x:Name="btnLogin"
-                            Width="100"
-                            Height="40"
-                            materialDesign:ButtonAssist.CornerRadius="10"
-                            Background="#D94448"
-                            BorderBrush="#D94448"
-                            BorderThickness="2"
-                            Click="btnLogin_Click"
-                            Content="Login"
-                            Foreground="White"
-                            Style="{StaticResource MaterialDesignRaisedButton}"
-                            ToolTip="Login" />
+        x:Name="btnLogin"
+        Width="100"
+        Height="40"
+        materialDesign:ButtonAssist.CornerRadius="10"
+        Background="#D94448"
+        BorderBrush="#D94448"
+        BorderThickness="2"
+        Click="btnLogin_Click"
+        Content="Login"
+        Foreground="White"
+        Style="{StaticResource MaterialDesignRaisedButton}"
+        ToolTip="Login" />
+
+                        <!-- Nút Register -->
+                        <Button
+        x:Name="btnRegister"
+        Width="100"
+        Height="30"
+        Margin="0,10,0,0"
+        Click="btnRegister_Click"
+        Content="Register"
+        Style="{StaticResource MaterialDesignFlatButton}"
+        Foreground="White"
+        Background="Transparent"
+        BorderBrush="White"
+        BorderThickness="0"
+        ToolTip="Create new account" />
+
+                        <!-- Nút Forgot Password -->
+                        <Button
+        x:Name="btnForgotPassword"
+        Width="150"
+        Height="30"
+        Margin="0,5,0,0"
+        Click="btnForgotPassword_Click"
+        Content="Forgot Password?"
+        Style="{StaticResource MaterialDesignFlatButton}"
+        Foreground="White"
+        Background="Transparent"
+        BorderBrush="White"
+        BorderThickness="0"
+        ToolTip="Recover your account" />
                     </StackPanel>
+
                 </StackPanel>
             </StackPanel>
             <StackPanel Width="100">
