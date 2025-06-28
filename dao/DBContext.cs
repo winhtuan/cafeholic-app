@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Configuration;
+using CAFEHOLIC.Model;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Logging;
+using CAFEHOLIC;
 
 namespace CAFEHOLIC.dao
 {
@@ -27,5 +30,10 @@ namespace CAFEHOLIC.dao
             conn.Open();
             return conn;
         }
+        public ILogger<T> GetLogger<T>()
+        {
+            return CAFEHOLIC.App.LoggerFactory.CreateLogger<T>();
+        }
+
     }
 }
