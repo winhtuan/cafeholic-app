@@ -15,6 +15,16 @@ namespace CAFEHOLIC.DAO
             this.context = dBContext;
             this.logger = logger;
         }
+        public string GenerateOTP(string phoneNumber)
+        {
+            var random = new Random();
+            string otp = string.Concat(Enumerable.Range(0, 6).Select(_ => random.Next(10).ToString()));
+
+            // (Tuỳ chọn) Lưu OTP vào cache/bộ nhớ hoặc DB nếu cần xác minh sau
+            // Example: SaveOtpToDatabase(phoneNumber, otp);
+
+            return otp;
+        }
 
         public Account CheckLogin(string phone, string password)
         {
@@ -133,7 +143,6 @@ namespace CAFEHOLIC.DAO
             {
                 using (var conn = context.GetConnection())
                 {
-                    conn.Open();
                     string query = "SELECT 1 FROM Account WHERE PhoneNumber = @Phone";
                     using (var cmd = new SqlCommand(query, conn))
                     {

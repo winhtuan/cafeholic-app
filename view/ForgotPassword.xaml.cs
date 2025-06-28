@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using CAFEHOLIC.DAO;
+using Newtonsoft.Json;
+using service;
 
 namespace CAFEHOLIC.view
 {
@@ -27,7 +30,7 @@ namespace CAFEHOLIC.view
             InitializeComponent();
         }
 
-        private void btnSend_Click(object sender, RoutedEventArgs e)
+        private async void btnSend_Click(object sender, RoutedEventArgs e)
         {
             var phoneNumber = txtPhone.Text.Trim();
             if (string.IsNullOrEmpty(phoneNumber))
@@ -35,32 +38,43 @@ namespace CAFEHOLIC.view
                 MessageBox.Show("Please enter your phone number.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+
             if (phoneNumber.Length != 10 || !phoneNumber.StartsWith("0"))
             {
-                MessageBox.Show("Your phone number is not valid! (Phone number with length 10 and start with 0)\nPlease check again!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Phone number must start with 0 and have 10 digits.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            if (accountDAO.IsPhoneNumberExists(phoneNumber))
+
+            if (!accountDAO.IsPhoneNumberExists(phoneNumber))
             {
-                // Gửi mã xác minh đến số điện thoại
-                //string verificationCode = accountDAO.SendVerificationCode(phoneNumber);
-                //if (!string.IsNullOrEmpty(verificationCode))
-                //{
-                //    MessageBox.Show("A verification code has been sent to your phone number.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                //    // Mở cửa sổ nhập mã xác minh
-                //    VerificationWindow verificationWindow = new VerificationWindow(accountDAO, phoneNumber, verificationCode);
-                //    verificationWindow.Owner = this; // Đặt cửa sổ hiện tại là chủ sở hữu
-                //    verificationWindow.Show();
-                //    this.Hide(); // Ẩn cửa sổ ForgotPassword
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Failed to send verification code. Please try again later.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                //}
+                MessageBox.Show("No account found with this phone number.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            // Gửi OTP
+            string[] phoneNumbersArray = new string[] { "84334354406" };
+            string OTP = accountDAO.GenerateOTP(phoneNumber);
+            string content = $"Your verification code is: {OTP}. Please use this code to reset your password.";
+
+            var smsApi = new SpeedSMSApi(ConfigurationManager.AppSettings["SMS_key"]);
+            string responseJson = await smsApi.SendSMS(phoneNumbersArray, content, 2, "");
+
+            dynamic result = JsonConvert.DeserializeObject(responseJson);
+            string status = result.status;
+
+            if (status == "success")
+            {
+                // Hiển thị thành công & mở cửa sổ nhập mã
+                MessageBox.Show("✅ OTP has been sent to your phone number.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                VeriWindow verificationWindow = new VeriWindow(accountDAO, OTP);
+                verificationWindow.Owner = this;
+                verificationWindow.Show();
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("No account found with this phone number.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                string message = result.message;
+                MessageBox.Show($"❌ Failed to send SMS: {message}", "SMS Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

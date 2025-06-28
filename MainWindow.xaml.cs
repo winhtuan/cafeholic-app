@@ -11,10 +11,17 @@ using System.Windows.Shapes;
 using CAFEHOLIC.dao;
 using CAFEHOLIC.DAO;
 using CAFEHOLIC.Model;
+using CAFEHOLIC.service;
 using CAFEHOLIC.view;
+using Microsoft.Extensions.Logging;
 
 namespace CAFEHOLIC
 {
+    public static class AppSession
+    {
+        public static int CurrentUserId { get; set; } = 1;
+        public static readonly ILogger<ProductService> logger=new DBContext().GetLogger<ProductService>();
+    }
 
     public partial class MainWindow : Window
     {
@@ -47,7 +54,10 @@ namespace CAFEHOLIC
             Account acc = accDAO.CheckLogin(txtUsername.Text, txtPassword.Password);
             if (acc != null)
             {
-                MessageBox.Show("Login success", "Notify");
+                AppSession.CurrentUserId = acc.AccId;
+                HomeWindown homeWindow = new HomeWindown();
+                homeWindow.Show();
+                this.Close();
             }
             else
             {

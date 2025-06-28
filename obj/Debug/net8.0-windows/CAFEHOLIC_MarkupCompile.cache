@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Thanh Loc\source\repos\cafeholic-app\obj\Debug\net8.0-windows\
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\
 CAFEHOLIC
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Thanh Loc\source\repos\cafeholic-app\App.xaml
-31892386888
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\App.xaml
+6-1224120442
 
-26-2106943228
-244-997479337
-MainWindow.xaml;view\ForgotPassword.xaml;view\Register.xaml;
+371497281449
+245-1802064875
+MainWindow.xaml;view\ForgotPassword.xaml;view\HomeWindown.xaml;view\Page\HomePage.xaml;view\Register.xaml;view\VeriWindow.xaml;
 
 False
 
