@@ -26,6 +26,35 @@ namespace CAFEHOLIC.DAO
             return otp;
         }
 
+        public Account? GetAccountByPhone(string phoneNumber)
+        {
+            try
+            {
+                using var conn = context.GetConnection();
+                string query = "SELECT * FROM Account WHERE PhoneNumber = @Phone";
+                using var cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Phone", phoneNumber);
+
+                using var reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    return new Account
+                    {
+                        AccId = reader.GetInt32(reader.GetOrdinal("AccID")),
+                        PhoneNumber = reader.GetString(reader.GetOrdinal("PhoneNumber")),
+                        UserId = reader.IsDBNull(reader.GetOrdinal("UserID")) ? null : reader.GetInt32(reader.GetOrdinal("UserID"))
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Lỗi khi tìm account theo phone.");
+            }
+
+            return null;
+        }
+
+
         public Account CheckLogin(string phone, string password)
         {
             logger.LogInformation("Kiểm tra đăng nhập cho tài khoản: {Username}", phone);

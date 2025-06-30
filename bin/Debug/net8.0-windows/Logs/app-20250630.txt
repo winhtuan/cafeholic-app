@@ -1,0 +1,333 @@
+2025-06-30T08:41:05.9931606+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "0334354406" (350afed2)
+2025-06-30T08:41:05.9947344+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-30T08:41:06.2405908+07:00  [INF] Đang thực hiện truy vấn đăng nhập... (358ad79d)
+2025-06-30T08:41:07.2149575+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: 
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly cloudy
+- Nhiệt độ: 29.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Trà đào cam sả, Bạc xỉu, Matcha đá xay, Cacao nóng, Hồng trà sữa trân châu, Trà chanh mật ong, Espresso, Cà phê đen đá, Trà vải, Latte, Trà sữa khoai môn, Sinh tố bơ, Chanh tuyết, Cà phê dừa
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-06-30T08:42:40.0663000+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "0334354406" (350afed2)
+2025-06-30T08:42:40.0676954+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-30T08:42:40.2617123+07:00  [INF] Đang thực hiện truy vấn đăng nhập... (358ad79d)
+2025-06-30T08:42:41.1372964+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: 
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly cloudy
+- Nhiệt độ: 29.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Trà đào cam sả, Bạc xỉu, Matcha đá xay, Cacao nóng, Hồng trà sữa trân châu, Trà chanh mật ong, Espresso, Cà phê đen đá, Trà vải, Latte, Trà sữa khoai môn, Sinh tố bơ, Chanh tuyết, Cà phê dừa
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-06-30T08:43:58.2979793+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "0334354406" (350afed2)
+2025-06-30T08:43:58.2994029+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-30T08:43:58.4864986+07:00  [INF] Đang thực hiện truy vấn đăng nhập... (358ad79d)
+2025-06-30T08:43:59.3060357+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: 
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly cloudy
+- Nhiệt độ: 29.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Trà đào cam sả, Bạc xỉu, Matcha đá xay, Cacao nóng, Hồng trà sữa trân châu, Trà chanh mật ong, Espresso, Cà phê đen đá, Trà vải, Latte, Trà sữa khoai môn, Sinh tố bơ, Chanh tuyết, Cà phê dừa
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-06-30T08:44:23.4326950+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "0334354406" (350afed2)
+2025-06-30T08:44:23.4341516+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-30T08:44:23.6471569+07:00  [INF] Đang thực hiện truy vấn đăng nhập... (358ad79d)
+2025-06-30T08:44:24.6073638+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: 
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly cloudy
+- Nhiệt độ: 29.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Trà đào cam sả, Bạc xỉu, Matcha đá xay, Cacao nóng, Hồng trà sữa trân châu, Trà chanh mật ong, Espresso, Cà phê đen đá, Trà vải, Latte, Trà sữa khoai môn, Sinh tố bơ, Chanh tuyết, Cà phê dừa
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-06-30T08:44:55.6120872+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "0334354406" (350afed2)
+2025-06-30T08:44:55.6134624+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-30T08:44:55.8061572+07:00  [INF] Đang thực hiện truy vấn đăng nhập... (358ad79d)
+2025-06-30T08:44:56.6537264+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: 
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly cloudy
+- Nhiệt độ: 29.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Trà đào cam sả, Bạc xỉu, Matcha đá xay, Cacao nóng, Hồng trà sữa trân châu, Trà chanh mật ong, Espresso, Cà phê đen đá, Trà vải, Latte, Trà sữa khoai môn, Sinh tố bơ, Chanh tuyết, Cà phê dừa
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-06-30T08:46:08.6486035+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "0334354406" (350afed2)
+2025-06-30T08:46:08.6499990+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-30T08:46:08.8852530+07:00  [INF] Đang thực hiện truy vấn đăng nhập... (358ad79d)
+2025-06-30T08:46:09.7126841+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: 
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly cloudy
+- Nhiệt độ: 29.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Trà đào cam sả, Bạc xỉu, Matcha đá xay, Cacao nóng, Hồng trà sữa trân châu, Trà chanh mật ong, Espresso, Cà phê đen đá, Trà vải, Latte, Trà sữa khoai môn, Sinh tố bơ, Chanh tuyết, Cà phê dừa
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-06-30T08:46:30.0356815+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "0334354406" (350afed2)
+2025-06-30T08:46:30.0370614+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-30T08:46:30.2327935+07:00  [INF] Đang thực hiện truy vấn đăng nhập... (358ad79d)
+2025-06-30T08:46:30.9863791+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: 
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly cloudy
+- Nhiệt độ: 29.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Trà đào cam sả, Bạc xỉu, Matcha đá xay, Cacao nóng, Hồng trà sữa trân châu, Trà chanh mật ong, Espresso, Cà phê đen đá, Trà vải, Latte, Trà sữa khoai môn, Sinh tố bơ, Chanh tuyết, Cà phê dừa
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-06-30T08:48:06.9223083+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "0334354406" (350afed2)
+2025-06-30T08:48:06.9237641+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-30T08:48:07.1451591+07:00  [INF] Đang thực hiện truy vấn đăng nhập... (358ad79d)
+2025-06-30T08:48:08.1626737+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: 
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly cloudy
+- Nhiệt độ: 30.3°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Trà đào cam sả, Bạc xỉu, Matcha đá xay, Cacao nóng, Hồng trà sữa trân châu, Trà chanh mật ong, Espresso, Cà phê đen đá, Trà vải, Latte, Trà sữa khoai môn, Sinh tố bơ, Chanh tuyết, Cà phê dừa
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-06-30T08:49:50.6305341+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "0334354406" (350afed2)
+2025-06-30T08:49:50.6318232+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-30T08:49:50.8486122+07:00  [INF] Đang thực hiện truy vấn đăng nhập... (358ad79d)
+2025-06-30T08:49:51.6164718+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: 
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly cloudy
+- Nhiệt độ: 30.3°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Trà đào cam sả, Bạc xỉu, Matcha đá xay, Cacao nóng, Hồng trà sữa trân châu, Trà chanh mật ong, Espresso, Cà phê đen đá, Trà vải, Latte, Trà sữa khoai môn, Sinh tố bơ, Chanh tuyết, Cà phê dừa
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-06-30T08:50:28.9924125+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "0334354406" (350afed2)
+2025-06-30T08:50:28.9939913+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-30T08:50:29.2289792+07:00  [INF] Đang thực hiện truy vấn đăng nhập... (358ad79d)
+2025-06-30T08:50:30.0154469+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: 
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly cloudy
+- Nhiệt độ: 30.3°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Trà đào cam sả, Bạc xỉu, Matcha đá xay, Cacao nóng, Hồng trà sữa trân châu, Trà chanh mật ong, Espresso, Cà phê đen đá, Trà vải, Latte, Trà sữa khoai môn, Sinh tố bơ, Chanh tuyết, Cà phê dừa
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-06-30T08:51:27.5202816+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: 
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly cloudy
+- Nhiệt độ: 30.3°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Trà đào cam sả, Bạc xỉu, Matcha đá xay, Cacao nóng, Hồng trà sữa trân châu, Trà chanh mật ong, Espresso, Cà phê đen đá, Trà vải, Latte, Trà sữa khoai môn, Sinh tố bơ, Chanh tuyết, Cà phê dừa
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-06-30T09:33:30.7588842+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "0334354406" (350afed2)
+2025-06-30T09:33:30.7604764+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-30T09:33:30.9079047+07:00  [INF] Đang thực hiện truy vấn đăng nhập... (358ad79d)
+2025-06-30T09:33:31.9136224+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: 
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly cloudy
+- Nhiệt độ: 30.1°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Trà đào cam sả, Bạc xỉu, Matcha đá xay, Cacao nóng, Hồng trà sữa trân châu, Trà chanh mật ong, Espresso, Cà phê đen đá, Trà vải, Latte, Trà sữa khoai môn, Sinh tố bơ, Chanh tuyết, Cà phê dừa
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-06-30T09:37:14.5889563+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "0334354406" (350afed2)
+2025-06-30T09:37:14.5903102+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-30T09:37:14.7256795+07:00  [INF] Đang thực hiện truy vấn đăng nhập... (358ad79d)
+2025-06-30T09:37:15.7013331+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: 
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly cloudy
+- Nhiệt độ: 30.1°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Trà đào cam sả, Bạc xỉu, Matcha đá xay, Cacao nóng, Hồng trà sữa trân châu, Trà chanh mật ong, Espresso, Cà phê đen đá, Trà vải, Latte, Trà sữa khoai môn, Sinh tố bơ, Chanh tuyết, Cà phê dừa
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-06-30T09:37:40.5234894+07:00  [ERR] ❌ Lỗi khi thêm Reservation (73f71ce9)
+Microsoft.Data.SqlClient.SqlException (0x80131904): The parameterized query '(@UserId int,@RoomId int,@StartTime datetime,@EndTime nvarchar(4' expects the parameter '@EndTime', which was not supplied.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at CAFEHOLIC.DAO.CAFEHOLIC.DAO.ReservationDAO.InsertReservation(Reservation reservation) in C:\Users\Thanh Loc\Source\Repos\cafeholic-app\DAO\ReservationDAO.cs:line 45
+ClientConnectionId:2035bbd9-d8fa-4d1f-8ad9-3c0f88a34410
+Error Number:8178,State:1,Class:16
+2025-06-30T09:54:54.8620123+07:00  [INF] Kiểm tra đăng nhập cho tài khoản: "0334354406" (350afed2)
+2025-06-30T09:54:54.8633930+07:00  [INF] Mật khẩu đã được cung cấp: "123" (14189866)
+2025-06-30T09:54:55.0910018+07:00  [INF] Đang thực hiện truy vấn đăng nhập... (358ad79d)
+2025-06-30T09:54:56.3274347+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: 
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly cloudy
+- Nhiệt độ: 31°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Trà đào cam sả, Bạc xỉu, Matcha đá xay, Cacao nóng, Hồng trà sữa trân châu, Trà chanh mật ong, Espresso, Cà phê đen đá, Trà vải, Latte, Trà sữa khoai môn, Sinh tố bơ, Chanh tuyết, Cà phê dừa
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)

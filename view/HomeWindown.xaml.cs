@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CAFEHOLIC.view.Page;
 
 namespace CAFEHOLIC.view
 {
@@ -24,5 +25,10 @@ namespace CAFEHOLIC.view
             InitializeComponent();
             MainFrame.Navigate(new view.Page.HomePage());
         }
+        private void Homepage_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new HomePage());
+        }
+
     }
 }

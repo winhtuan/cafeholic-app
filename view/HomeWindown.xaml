@@ -7,7 +7,23 @@
         mc:Ignorable="d"
         Title="HomeWindown" Height="450" Width="800">
     <Grid>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" 
-               Background="#FFFFFF" BorderBrush="#E5E7EB" BorderThickness="0,1,0,0"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Row for Button -->
+            <RowDefinition Height="*"/>
+            <!-- Row for Frame -->
+        </Grid.RowDefinitions>
+
+        <Button Content="Homepage" 
+                HorizontalAlignment="Left" 
+                Margin="10,10,0,10" 
+                Padding="10,5"
+                Click="Homepage_Click"/>
+
+        <Frame x:Name="MainFrame" Grid.Row="1"
+               NavigationUIVisibility="Hidden" 
+               Background="#FFFFFF" 
+               BorderBrush="#E5E7EB" 
+               BorderThickness="0,1,0,0"/>
     </Grid>
 </Window>
