@@ -14,7 +14,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CAFEHOLIC.DAO;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Serilog.Core;
 using service;
 
 namespace CAFEHOLIC.view.Page
@@ -26,6 +28,7 @@ namespace CAFEHOLIC.view.Page
     {
         private AccountDAO accountDAO;
         private LoginWindown mainWindow;
+       
 
         public ForgotPasswordPage(LoginWindown login,AccountDAO acc)
         {
@@ -34,50 +37,54 @@ namespace CAFEHOLIC.view.Page
             InitializeComponent();
         }
 
-        private async void btnSend_Click(object sender, RoutedEventArgs e)
+        private void btnSend_Click(object sender, RoutedEventArgs e)
         {
             var phoneNumber = txtPhone.Text.Trim();
             if (string.IsNullOrEmpty(phoneNumber))
             {
-                MessageBox.Show("Please enter your phone number.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Please enter your phone number.", "Error");
                 return;
             }
 
             if (phoneNumber.Length != 10 || !phoneNumber.StartsWith("0"))
             {
-                MessageBox.Show("Phone number must start with 0 and have 10 digits.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Phone number must start with 0 and have 10 digits.", "Error");
                 return;
             }
 
             if (!accountDAO.IsPhoneNumberExists(phoneNumber))
             {
-                MessageBox.Show("No account found with this phone number.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("No account found with this phone number.", "Error");
                 return;
             }
 
-            // Gửi OTP
-            string[] phoneNumbersArray = new string[] { "84334354406" };
-            string OTP = accountDAO.GenerateOTP(phoneNumber);
-            string content = $"Your verification code is: {OTP}. Please use this code to reset your password.";
+            // Gửi OTP bằng Twilio
+            string otp = accountDAO.GenerateOTP(phoneNumber);
+            string message = $"Your verification code is: {otp}";
 
-            var smsApi = new SpeedSMSApi(ConfigurationManager.AppSettings["SMS_key"]);
-            string responseJson = await smsApi.SendSMS(phoneNumbersArray, content, 2, "");
+            string toPhone = "+84" + phoneNumber.Substring(1).Trim();
 
-            dynamic result = JsonConvert.DeserializeObject(responseJson);
-            string status = result.status;
+            MessageBox.Show(toPhone + " " + message, "Debug Info");
 
-            if (status == "success")
+            var twilio = new TwilioSMSApi(
+                ConfigurationManager.AppSettings["Twilio_SID"],
+                ConfigurationManager.AppSettings["Twilio_Token"],
+                ConfigurationManager.AppSettings["Twilio_From"]
+            );
+
+            bool success = twilio.SendSMS(toPhone, message);
+
+            if (success)
             {
-                // Hiển thị thành công & mở cửa sổ nhập mã
-                MessageBox.Show("✅ OTP has been sent to your phone number.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
-                mainWindow.MainFrame.Navigate(new VerifyPage(mainWindow,accountDAO,OTP));
+                MessageBox.Show("✅ OTP has been sent.", "Success");
+                mainWindow.MainFrame.Navigate(new VerifyPage(mainWindow, accountDAO, otp, phoneNumber, "forgot"));
             }
             else
             {
-                string message = result.message;
-                MessageBox.Show($"❌ Failed to send SMS: {message}", "SMS Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("❌ Failed to send OTP.", "Error");
             }
         }
+
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {

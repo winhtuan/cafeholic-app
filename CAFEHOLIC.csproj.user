@@ -20,6 +20,9 @@
     <Compile Update="view\Page\RegisterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="view\Page\ResetPasswordPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="view\Page\RoomPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

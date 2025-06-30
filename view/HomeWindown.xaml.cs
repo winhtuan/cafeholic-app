@@ -29,6 +29,12 @@ namespace CAFEHOLIC.view
         {
             MainFrame.Navigate(new HomePage());
         }
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            LoginWindown login = new LoginWindown();
+            login.Show();
+            this.Close();
+        }
 
     }
 }

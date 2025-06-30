@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,8 @@ using System.Windows.Shapes;
 using CAFEHOLIC.dao;
 using CAFEHOLIC.DAO;
 using CAFEHOLIC.Model;
+using Newtonsoft.Json;
+using Twilio.TwiML.Messaging;
 
 namespace CAFEHOLIC.view.Page
 {
@@ -61,18 +64,35 @@ namespace CAFEHOLIC.view.Page
                 MessageBox.Show("Had have account with Phone number: " + phoneNumber + ".\n You can get your passowrd if forgot in login screen.", "Lỗi");
                 return;
             }
-            User newUser = new UserDAO(new DBContext(), new DBContext().GetLogger<UserDAO>()).CreateUser(phoneNumber, username, password);
-            Account newAccount = new AccountDAO(new DBContext(), new DBContext().GetLogger<AccountDAO>()).CreateAccount(phoneNumber, password, newUser.Id);
-            if (newAccount != null)
+
+            string otp = accDAO.GenerateOTP(phoneNumber);
+
+            // Gửi SMS OTP
+            string toPhone = "+84" + phoneNumber.Substring(1).Trim();
+            string content = $"Your verification code is: {otp}. Please use this code to verify your phone number.";
+
+            // Gọi SpeedSMS (hoặc Twilio nếu bạn dùng)
+            var twilio = new TwilioSMSApi(
+                ConfigurationManager.AppSettings["Twilio_SID"],
+                ConfigurationManager.AppSettings["Twilio_Token"],
+                ConfigurationManager.AppSettings["Twilio_From"]
+            );
+
+            bool status = twilio.SendSMS(toPhone, content);
+
+            if (status)
             {
-                MessageBox.Show("Register succcessfull!", "Notify");
-                btnCancel_Click(sender, e);
+                MessageBox.Show("✅ OTP has been sent. Please verify your phone number.", "SMS Sent");
+
+                // Mở VerifyPage để nhập OTP
+                mainWindow.MainFrame.Navigate(new VerifyPage(mainWindow, accDAO, otp, phoneNumber, "register",Name,password));
+                return;
             }
             else
             {
-                MessageBox.Show("Register fail!", "Lỗi");
+                MessageBox.Show($"❌ Failed to send OTP", "Error");
+                return;
             }
-
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
