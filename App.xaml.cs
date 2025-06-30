@@ -22,8 +22,6 @@ namespace CAFEHOLIC
                 builder.SetMinimumLevel(LogLevel.Information);
             });
 
-            var mainWindow = new MainWindow(); // khởi tạo UI
-            mainWindow.Show();
         }
     }
 }
