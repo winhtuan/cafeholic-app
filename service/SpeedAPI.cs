@@ -1,40 +1,45 @@
-﻿using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
-using Newtonsoft.Json;
+﻿using System.Windows;
+using CAFEHOLIC.dao;
+using Microsoft.Extensions.Logging;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 
-namespace service
+public class TwilioSMSApi
 {
+    private readonly string accountSid;
+    private readonly string authToken;
+    private readonly string fromPhone;
+    private ILogger<TwilioSMSApi> logger=new DBContext().GetLogger<TwilioSMSApi>();
 
-    public class SpeedSMSApi
+    public TwilioSMSApi(string sid, string token, string from)
     {
-        private readonly string accessToken;
-        private readonly HttpClient httpClient;
+        accountSid = sid;
+        authToken = token;
+        fromPhone = from;
+        TwilioClient.Init(accountSid, authToken);
+    }
 
-        public SpeedSMSApi(string token)
+    public bool SendSMS(string toPhone, string message)
+    {
+        try
         {
-            accessToken = token;
-            httpClient = new HttpClient();
-            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
-            httpClient.BaseAddress = new Uri("https://api.speedsms.vn/");
+            var to = new PhoneNumber(toPhone);
+            var from = new PhoneNumber(fromPhone);
+            logger.LogInformation($"Sending SMS to {toPhone}: {message}"+$"from{from}");
+
+            var msg = MessageResource.Create(
+                to: to,
+                from: from,
+                body: message
+            );
+
+            return msg.ErrorCode == null;
         }
-
-        public async Task<string> SendSMS(string[] phones, string content, int sms_type, string sender)
+        catch (Exception ex)
         {
-            var data = new
-            {
-                to = phones,
-                content = content,
-                sms_type = sms_type,
-                sender = sender
-            };
-
-            var json = JsonConvert.SerializeObject(data);
-            var contentData = new StringContent(json, Encoding.UTF8, "application/json");
-
-            var response = await httpClient.PostAsync("index.php/sms/send", contentData);
-            string responseContent = await response.Content.ReadAsStringAsync();
-            return responseContent;
+            MessageBox.Show($"Lỗi gửi SMS: {ex.Message}");
+            return false;
         }
     }
 }

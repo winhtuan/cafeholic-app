@@ -20,11 +20,37 @@ namespace CAFEHOLIC.DAO
             var random = new Random();
             string otp = string.Concat(Enumerable.Range(0, 6).Select(_ => random.Next(10).ToString()));
 
-            // (Tuỳ chọn) Lưu OTP vào cache/bộ nhớ hoặc DB nếu cần xác minh sau
-            // Example: SaveOtpToDatabase(phoneNumber, otp);
-
             return otp;
         }
+
+        public Account? GetAccountByPhone(string phoneNumber)
+        {
+            try
+            {
+                using var conn = context.GetConnection();
+                string query = "SELECT * FROM Account WHERE PhoneNumber = @Phone";
+                using var cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@Phone", phoneNumber);
+
+                using var reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    return new Account
+                    {
+                        AccId = reader.GetInt32(reader.GetOrdinal("AccID")),
+                        PhoneNumber = reader.GetString(reader.GetOrdinal("PhoneNumber")),
+                        UserId = reader.IsDBNull(reader.GetOrdinal("UserID")) ? null : reader.GetInt32(reader.GetOrdinal("UserID"))
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Lỗi khi tìm account theo phone.");
+            }
+
+            return null;
+        }
+
 
         public Account CheckLogin(string phone, string password)
         {
@@ -135,6 +161,32 @@ namespace CAFEHOLIC.DAO
             }
             return null;
         }
+
+        public bool UpdatePasswordByPhone(string phoneNumber, string newPassword)
+        {
+            logger.LogInformation("Đang cập nhật mật khẩu cho số điện thoại: {Phone}", phoneNumber);
+            try
+            {
+                using (var conn = context.GetConnection())
+                {
+                    string query = "UPDATE Account SET PasswordHash = @Password WHERE PhoneNumber = @Phone";
+                    using (var cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Password", newPassword);
+                        cmd.Parameters.AddWithValue("@Phone", phoneNumber);
+
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        return rowsAffected > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Lỗi khi cập nhật mật khẩu.");
+                return false;
+            }
+        }
+
 
         public bool IsPhoneNumberExists(string phoneNumber)
         {
