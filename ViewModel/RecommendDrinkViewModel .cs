@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using CAFEHOLIC.Model;
 using CAFEHOLIC.service;
+using CAFEHOLIC.view;
 
 namespace CAFEHOLIC.ViewModel
 {
