@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CAFEHOLIC.dao;
-using CAFEHOLIC.DAO.CAFEHOLIC.DAO;
+using CAFEHOLIC.DAO;
 using CAFEHOLIC.Model;
 using CAFEHOLIC.view.Dialog;
 using CAFEHOLIC.ViewModel;
@@ -26,8 +26,8 @@ namespace CAFEHOLIC.view.Page
     /// </summary>
     public partial class RoomPage : System.Windows.Controls.Page
     {
-        RoomDAO roomDAO = new DAO.CAFEHOLIC.DAO.RoomDAO(new DBContext(), new DBContext().GetLogger<RoomDAO>());
-        ReservationDAO reservationDAO = new ReservationDAO(new DBContext(), new DBContext().GetLogger<ReservationDAO>());
+        RoomDAO roomDAO = new RoomDAO(new DBContext().GetLogger<RoomDAO>());
+        ReservationDAO reservationDAO = new ReservationDAO(new DBContext().GetLogger<ReservationDAO>());
 
         public ObservableCollection<RoomViewModel> Rooms { get; set; } = new();
 
