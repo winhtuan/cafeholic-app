@@ -25,5 +25,10 @@ namespace CAFEHOLIC.view.Page
             InitializeComponent();
             this.DataContext = new ViewModel.RecommendDrinkViewModel();
         }
+
+        private void GoToRoomPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService?.Navigate(new RoomPage());
+        }
     }
 }

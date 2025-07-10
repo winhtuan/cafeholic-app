@@ -94,6 +94,10 @@
             "Serilog.Extensions.Logging.File": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "Twilio": {
+              "target": "Package",
+              "version": "[7.11.3, )"
             }
           },
           "imports": [

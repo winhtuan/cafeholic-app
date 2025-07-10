@@ -75,17 +75,18 @@ D:\FPT_SU25\prn212\CAFEHOLIC\obj\Debug\net8.0-windows\CAFEHOLIC.pdb
 D:\FPT_SU25\prn212\CAFEHOLIC\obj\Debug\net8.0-windows\CAFEHOLIC.genruntimeconfig.cache
 D:\FPT_SU25\prn212\CAFEHOLIC\obj\Debug\net8.0-windows\ref\CAFEHOLIC.dll
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\CAFEHOLIC.csproj.AssemblyReference.cache
-C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\MainWindow.baml
-C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\ForgotPassword.baml
-C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Register.baml
-C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\VeriWindow.baml
-C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\App.baml
-C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\MainWindow.g.cs
-C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\ForgotPassword.g.cs
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Dialog\ReservationPopUp.baml
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\LoginWindown.baml
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Dialog\ReservationPopUp.g.cs
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\HomeWindown.g.cs
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\LoginWindown.g.cs
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Page\ForgotPasswordPage.g.cs
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Page\HomePage.g.cs
-C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Register.g.cs
-C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\VeriWindow.g.cs
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Page\LoginPage.g.cs
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Page\RegisterPage.g.cs
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Page\ResetPasswordPage.g.cs
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Page\RoomPage.g.cs
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Page\VerifyPage.g.cs
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\CAFEHOLIC_MarkupCompile.cache
@@ -103,6 +104,7 @@ C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\MaterialD
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.dll
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\Microsoft.Bcl.Cryptography.dll
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\Microsoft.Bcl.Memory.dll
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\Microsoft.Build.Locator.dll
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.dll
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.CSharp.dll
@@ -166,6 +168,7 @@ C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\System.Me
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\System.Text.Json.dll
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\Twilio.dll
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\de\Microsoft.CodeAnalysis.resources.dll
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\es\Microsoft.CodeAnalysis.resources.dll
@@ -252,8 +255,15 @@ C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\runtimes\
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\App.baml
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\HomeWindown.baml
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Page\ForgotPasswordPage.baml
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Page\HomePage.baml
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Page\LoginPage.baml
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Page\RegisterPage.baml
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Page\ResetPasswordPage.baml
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Page\RoomPage.baml
+C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\view\Page\VerifyPage.baml
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\CAFEHOLIC.g.resources
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\CAFEHOLIC.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Thanh Loc\Source\Repos\cafeholic-app\obj\Debug\net8.0-windows\CAFEHOLIC.AssemblyInfoInputs.cache

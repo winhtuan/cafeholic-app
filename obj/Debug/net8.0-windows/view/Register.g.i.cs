@@ -87,7 +87,7 @@ namespace CAFEHOLIC.view {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CAFEHOLIC;component/view/register.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CAFEHOLIC;V1.0.0.0;component/view/register.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\view\Register.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

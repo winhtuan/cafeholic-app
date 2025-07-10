@@ -7,7 +7,29 @@
         mc:Ignorable="d"
         Title="HomeWindown" Height="450" Width="800">
     <Grid>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" 
-               Background="#FFFFFF" BorderBrush="#E5E7EB" BorderThickness="0,1,0,0"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Hàng chứa các nút -->
+        <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Left">
+            <Button Content="Homepage" 
+                Margin="0,0,10,0"
+                Padding="10,5"
+                Click="Homepage_Click"/>
+
+            <Button Content="Logout"
+                Padding="10,5"
+                Click="Logout_Click"/>
+        </StackPanel>
+
+        <!-- Khung Frame điều hướng -->
+        <Frame x:Name="MainFrame" Grid.Row="1"
+           NavigationUIVisibility="Hidden" 
+           Background="#FFFFFF" 
+           BorderBrush="#E5E7EB" 
+           BorderThickness="0,1,0,0"/>
     </Grid>
+
 </Window>
