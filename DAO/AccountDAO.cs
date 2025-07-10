@@ -1,216 +1,119 @@
-﻿using CAFEHOLIC.dao;
-using CAFEHOLIC.Model;
-using Microsoft.Data.SqlClient;
+﻿using CAFEHOLIC.Model;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace CAFEHOLIC.DAO
+namespace CAFEHOLIC.DAO;
+
+public class AccountDAO
 {
-    public class AccountDAO
+    private readonly CafeholicContext _context;
+    private readonly ILogger<AccountDAO> _logger;
+
+    public AccountDAO(ILogger<AccountDAO> logger)
     {
-        private readonly ILogger<AccountDAO> logger;
-        private readonly DBContext context;
+        _context = new CafeholicContext();
+        _logger = logger;
+    }
 
-        public AccountDAO(DBContext dBContext, ILogger<AccountDAO> logger)
+    public string GenerateOTP(string phoneNumber)
+    {
+        var random = new Random();
+        return string.Concat(Enumerable.Range(0, 6).Select(_ => random.Next(10).ToString()));
+    }
+
+    public Account? GetAccountByPhone(string phoneNumber)
+    {
+        try
         {
-            this.context = dBContext;
-            this.logger = logger;
+            return _context.Accounts.FirstOrDefault(a => a.PhoneNumber == phoneNumber);
         }
-        public string GenerateOTP(string phoneNumber)
+        catch (Exception ex)
         {
-            var random = new Random();
-            string otp = string.Concat(Enumerable.Range(0, 6).Select(_ => random.Next(10).ToString()));
-
-            return otp;
-        }
-
-        public Account? GetAccountByPhone(string phoneNumber)
-        {
-            try
-            {
-                using var conn = context.GetConnection();
-                string query = "SELECT * FROM Account WHERE PhoneNumber = @Phone";
-                using var cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@Phone", phoneNumber);
-
-                using var reader = cmd.ExecuteReader();
-                if (reader.Read())
-                {
-                    return new Account
-                    {
-                        AccId = reader.GetInt32(reader.GetOrdinal("AccID")),
-                        PhoneNumber = reader.GetString(reader.GetOrdinal("PhoneNumber")),
-                        UserId = reader.IsDBNull(reader.GetOrdinal("UserID")) ? null : reader.GetInt32(reader.GetOrdinal("UserID"))
-                    };
-                }
-            }
-            catch (Exception ex)
-            {
-                logger.LogError(ex, "Lỗi khi tìm account theo phone.");
-            }
-
+            _logger.LogError(ex, "Error finding account by phone.");
             return null;
         }
+    }
 
-
-        public Account CheckLogin(string phone, string password)
+    public Account? CheckLogin(string phone, string password)
+    {
+        try
         {
-            logger.LogInformation("Kiểm tra đăng nhập cho tài khoản: {Username}", phone);
-            logger.LogInformation("Mật khẩu đã được cung cấp: {Password}", password);
-            try
-            {
-                using (var conn = context.GetConnection())
-                {
-
-                    string query = "SELECT * FROM Account WHERE PhoneNumber = @phone AND PasswordHash = @Password " +
-                                   "AND IsVerified = 1";
-
-                    using (var cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@phone", phone);
-                        cmd.Parameters.AddWithValue("@Password", password);
-
-                        using (var reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                logger.LogInformation("Đang thực hiện truy vấn đăng nhập...");
-
-                                Account acc = new Account
-                                {
-                                    AccId = reader.GetInt32(reader.GetOrdinal("AccID")),
-                                    PhoneNumber = reader.GetString(reader.GetOrdinal("PhoneNumber")),
-                                    PasswordHash = reader.GetString(reader.GetOrdinal("PasswordHash"))
-                                };
-
-                                return acc;
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                logger.LogError(ex, "Lỗi khi kiểm tra đăng nhập.");
-            }
-
-            return null; // Đăng nhập thất bại
+            return _context.Accounts.FirstOrDefault(a => a.PhoneNumber == phone && a.PasswordHash == password && a.IsVerified == true);
         }
-
-        public Account GetAccountById(int accId)
+        catch (Exception ex)
         {
-            logger.LogInformation("Lấy thông tin tài khoản với ID: {AccId}", accId);
-            try
-            {
-                using (var conn = context.GetConnection())
-                {
-                    string query = "SELECT * FROM Account WHERE AccID = @AccId";
-                    using (var cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@AccId", accId);
-                        using (var reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                Account acc = new Account
-                                {
-                                    AccId = reader.GetInt32(reader.GetOrdinal("AccID")),
-                                    PhoneNumber = reader.GetString(reader.GetOrdinal("PhoneNumber")),
-                                    PasswordHash = reader.GetString(reader.GetOrdinal("PasswordHash")),
-                                    RegistDate = reader.IsDBNull(reader.GetOrdinal("RegistDate")) ? null : reader.GetDateTime(reader.GetOrdinal("RegistDate")),
-                                    VerificationToken = reader.IsDBNull(reader.GetOrdinal("VerificationToken")) ? null : reader.GetString(reader.GetOrdinal("VerificationToken")),
-                                    IsVerified = reader.IsDBNull(reader.GetOrdinal("IsVerified")) ? null : reader.GetBoolean(reader.GetOrdinal("IsVerified")),
-                                    RoleId = reader.IsDBNull(reader.GetOrdinal("RoleId")) ? null : reader.GetInt32(reader.GetOrdinal("RoleID")),
-                                    UserId = reader.IsDBNull(reader.GetOrdinal("UserId")) ? null : reader.GetInt32(reader.GetOrdinal("UserID"))
-                                };
-                                return acc;
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                logger.LogError(ex, "Lỗi khi lấy thông tin tài khoản.");
-            }
-            return null; // Không tìm thấy tài khoản
-        }
-
-        public Account CreateAccount(String Phone, String Password,int userID)
-        {
-            logger.LogInformation("Tạo tài khoản mới với số điện thoại: {Phone}", Phone);
-            try
-            {
-                using (var conn = context.GetConnection())
-                {
-                    string query = "INSERT INTO Account (PhoneNumber, PasswordHash, RegistDate, IsVerified,UserId,RoleId) " +
-                                   "VALUES (@Phone, @Password, GETDATE(), 1,@userid,1);SELECT SCOPE_IDENTITY();";
-                    using (var cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Phone", Phone);
-                        cmd.Parameters.AddWithValue("@Password", Password);
-                        cmd.Parameters.AddWithValue("@userid", userID);
-                        int newAccId = Convert.ToInt32(cmd.ExecuteScalar());
-                        logger.LogInformation("Tài khoản mới đã được tạo với ID: {NewAccId}", newAccId);
-                        return GetAccountById(newAccId);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                logger.LogError(ex, "Lỗi khi tạo tài khoản mới.");
-            }
+            _logger.LogError(ex, "Error checking login.");
             return null;
         }
+    }
 
-        public bool UpdatePasswordByPhone(string phoneNumber, string newPassword)
+    public Account? GetAccountById(int accId)
+    {
+        try
         {
-            logger.LogInformation("Đang cập nhật mật khẩu cho số điện thoại: {Phone}", phoneNumber);
-            try
-            {
-                using (var conn = context.GetConnection())
-                {
-                    string query = "UPDATE Account SET PasswordHash = @Password WHERE PhoneNumber = @Phone";
-                    using (var cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Password", newPassword);
-                        cmd.Parameters.AddWithValue("@Phone", phoneNumber);
-
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        return rowsAffected > 0;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                logger.LogError(ex, "Lỗi khi cập nhật mật khẩu.");
-                return false;
-            }
+            return _context.Accounts.Find(accId);
         }
-
-
-        public bool IsPhoneNumberExists(string phoneNumber)
+        catch (Exception ex)
         {
-            logger.LogInformation("Kiểm tra sự tồn tại của số điện thoại: {Phone}", phoneNumber);
-            try
-            {
-                using (var conn = context.GetConnection())
-                {
-                    string query = "SELECT 1 FROM Account WHERE PhoneNumber = @Phone";
-                    using (var cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Phone", phoneNumber);
-
-                        var result = cmd.ExecuteScalar();
-                        return result != null;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                logger.LogError(ex, "Lỗi khi kiểm tra số điện thoại.");
-                return false; // hoặc tùy bạn, có thể throw ra
-            }
+            _logger.LogError(ex, "Error retrieving account information.");
+            return null;
         }
+    }
 
+    public Account? CreateAccount(string phone, string password, int userId)
+    {
+        try
+        {
+            var account = new Account
+            {
+                PhoneNumber = phone,
+                PasswordHash = password,
+                RegistDate = DateTime.Now,
+                IsVerified = true,
+                UserId = userId,
+                RoleId = 1
+            };
+            _context.Accounts.Add(account);
+            _context.SaveChanges();
+            return account;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error creating new account.");
+            return null;
+        }
+    }
+
+    public bool UpdatePasswordByPhone(string phoneNumber, string newPassword)
+    {
+        try
+        {
+            var acc = _context.Accounts.FirstOrDefault(a => a.PhoneNumber == phoneNumber);
+            if (acc != null)
+            {
+                acc.PasswordHash = newPassword;
+                _context.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error updating password.");
+            return false;
+        }
+    }
+
+    public bool IsPhoneNumberExists(string phoneNumber)
+    {
+        try
+        {
+            return _context.Accounts.Any(a => a.PhoneNumber == phoneNumber);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error checking phone number existence.");
+            return false;
+        }
     }
 }

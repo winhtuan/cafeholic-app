@@ -30,7 +30,7 @@ namespace CAFEHOLIC.view
         public LoginWindown()
         {
             InitializeComponent();
-            accDAO = new AccountDAO(new DBContext(), new DBContext().GetLogger<AccountDAO>());
+            accDAO = new AccountDAO(new DBContext().GetLogger<AccountDAO>());
             MainFrame.Navigate(new LoginPage(this, accDAO));
         }
     }

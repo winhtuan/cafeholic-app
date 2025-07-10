@@ -13,7 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using CAFEHOLIC.dao;
 using CAFEHOLIC.DAO;
-using CAFEHOLIC.DAO.CAFEHOLIC.DAO;
 using CAFEHOLIC.Model;
 using CAFEHOLIC.ViewModel;
 
@@ -26,7 +25,7 @@ namespace CAFEHOLIC.view.Dialog
         public string Capacity { get; set; }
         public string PhoneNumber { get; set; } = "";
 
-        private readonly AccountDAO accountDAO = new(new DBContext(), new DBContext().GetLogger<AccountDAO>());
+        private readonly AccountDAO accountDAO = new(new DBContext().GetLogger<AccountDAO>());
 
         public Reservation? CreatedReservation { get; private set; }
 
@@ -63,7 +62,7 @@ namespace CAFEHOLIC.view.Dialog
                 EndTime = null,
                 Status = "Pending"
             };
-            new RoomDAO(new DBContext(), new DBContext().GetLogger<RoomDAO>()).UpdateRoomStatus(roomId, false);
+            new RoomDAO( new DBContext().GetLogger<RoomDAO>()).UpdateRoomStatus(roomId, false);
             this.DialogResult = true;
         }
     }

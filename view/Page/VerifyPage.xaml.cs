@@ -66,7 +66,7 @@ namespace CAFEHOLIC.view.Page
                 if (state == "register")
                 {
                     User newUser = new UserDAO(new DBContext(), new DBContext().GetLogger<UserDAO>()).CreateUser(phone, name, pass);
-                    Account newAccount = new AccountDAO(new DBContext(), new DBContext().GetLogger<AccountDAO>()).CreateAccount(phone, pass, newUser.Id);
+                    Account newAccount = new AccountDAO(new DBContext().GetLogger<AccountDAO>()).CreateAccount(phone, pass, newUser.Id);
                     if (newAccount != null)
                     {
                         MessageBox.Show("Register succcessfull!", "Notify");

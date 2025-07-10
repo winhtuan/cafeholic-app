@@ -4,8 +4,7 @@ using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Input;
 using CAFEHOLIC.dao;
-using CAFEHOLIC.DAO.CAFEHOLIC.DAO;
-
+using CAFEHOLIC.DAO;
 namespace CAFEHOLIC.ViewModel
 {
     public class RoomViewModel
@@ -45,7 +44,7 @@ namespace CAFEHOLIC.ViewModel
 
         public RoomVM()
         {
-            roomDAO = new RoomDAO(new DBContext(), new DBContext().GetLogger<RoomDAO>());
+            roomDAO = new RoomDAO(new DBContext().GetLogger<RoomDAO>());
             Rooms = new ObservableCollection<RoomViewModel>();
             LoadRooms();
             ApplyFilter();
@@ -102,8 +101,8 @@ namespace CAFEHOLIC.ViewModel
 
         private void OnComplete(RoomViewModel room)
         {
-            var reservationDAO = new ReservationDAO(new DBContext(), new DBContext().GetLogger<ReservationDAO>());
-            var roomDAO = new RoomDAO(new DBContext(), new DBContext().GetLogger<RoomDAO>());
+            var reservationDAO = new ReservationDAO(new DBContext().GetLogger<ReservationDAO>());
+            var roomDAO = new RoomDAO(new DBContext().GetLogger<RoomDAO>());
 
             // 1. Cập nhật EndTime cho reservation hiện tại
             if (reservationDAO.EndCurrentReservation(room.RoomId, DateTime.Now))
