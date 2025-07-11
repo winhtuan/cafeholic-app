@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thanh Loc\\Source\\Repos\\cafeholic-app\\CAFEHOLIC.csproj": {}
+    "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\CAFEHOLIC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Thanh Loc\\Source\\Repos\\cafeholic-app\\CAFEHOLIC.csproj": {
+    "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\CAFEHOLIC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thanh Loc\\Source\\Repos\\cafeholic-app\\CAFEHOLIC.csproj",
+        "projectUniqueName": "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\CAFEHOLIC.csproj",
         "projectName": "CAFEHOLIC",
-        "projectPath": "C:\\Users\\Thanh Loc\\Source\\Repos\\cafeholic-app\\CAFEHOLIC.csproj",
-        "packagesPath": "C:\\Users\\Thanh Loc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Thanh Loc\\Source\\Repos\\cafeholic-app\\obj\\",
+        "projectPath": "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\CAFEHOLIC.csproj",
+        "packagesPath": "C:\\Users\\winhtuan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Thanh Loc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\winhtuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -86,6 +86,10 @@
             "Microsoft.Extensions.Logging.Console": {
               "target": "Package",
               "version": "[9.0.6, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[9.0.7, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
