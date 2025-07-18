@@ -1,0 +1,122 @@
+﻿<Page x:Class="CAFEHOLIC.view.Page.RoomPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:vm="clr-namespace:CAFEHOLIC.ViewModel"
+      mc:Ignorable="d" d:DesignWidth="637.6">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Toolbar: Search + Filter -->
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0 0 0 12">
+            <TextBox Width="200"
+                     Height="30"
+                     FontSize="14"
+                     Padding="6"
+                     Background="#F3F4F6"
+                     BorderBrush="#D1D5DB"
+                     Text="{Binding Keyword, UpdateSourceTrigger=PropertyChanged}"
+                     Margin="0 0 10 0"
+                     ToolTip="🔍 Search by name or type"/>
+
+            <Button Content="🔄 Refresh"
+                    Command="{Binding RefreshCommand}"
+                    Width="111" Height="30"
+                    Background="#607D8B" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+
+            <Button Content="📚 Show All"
+                    Command="{Binding ShowAllCommand}"
+                    Width="90" Height="30"
+                    Margin="6,0,0,0"
+                    Background="#9C27B0" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+
+            <Button Content="✅ Available Only"
+                    Command="{Binding FilterAvailableCommand}"
+                    Width="154" Height="30"
+                    Margin="6,0,0,0"
+                    Background="#4CAF50" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+        </StackPanel>
+
+        <!-- Room Table -->
+        <DataGrid Grid.Row="1"
+                  ItemsSource="{Binding FilteredRooms}"
+                  SelectedItem="{Binding SelectedRoom, Mode=TwoWay}"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  IsReadOnly="True"
+                  RowHeight="60"
+                  HeadersVisibility="Column"
+                  FontSize="13"
+                  GridLinesVisibility="Horizontal"
+                  AlternatingRowBackground="#F9FAFB"
+                  BorderBrush="#E0E0E0"
+                  BorderThickness="1">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="🆔 ID" Binding="{Binding RoomId}" Width="60"/>
+                <DataGridTextColumn Header="🏠 Room Name" Binding="{Binding Name}" Width="*"/>
+                <DataGridTextColumn Header="🏷 Type" Binding="{Binding RoomType}" Width="120"/>
+                <DataGridTextColumn Header="👥 Capacity" Binding="{Binding Capacity}" Width="100"/>
+                <DataGridTextColumn Header="✅ Status" Binding="{Binding IsAvailable, Converter={StaticResource BoolToStatusConverter}}" Width="100"/>
+
+                <!-- ⬇️ Cột nút Reserve -->
+                <DataGridTemplateColumn Header="Action" Width="150">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.Resources>
+                                    <Style TargetType="Button" x:Key="ReserveButtonStyle">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsAvailable}" Value="False">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+
+                                    <Style TargetType="Button" x:Key="CompleteButtonStyle">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsAvailable}" Value="True">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Resources>
+
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                    <!-- Nút Reserve -->
+                                    <Button Content="Reserve"
+                            Style="{StaticResource ReserveButtonStyle}"
+                            Command="{Binding DataContext.ReserveCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                            CommandParameter="{Binding}"
+                            Background="#4CAF50"
+                            Foreground="White"
+                            Padding="6,4"
+                            Width="90"
+                            Cursor="Hand"/>
+
+                                    <!-- Nút Complete -->
+                                    <Button Content="Complete"
+                            Style="{StaticResource CompleteButtonStyle}"
+                            Command="{Binding DataContext.CompleteCommand, RelativeSource={RelativeSource AncestorType=Page}}"
+                            CommandParameter="{Binding}"
+                            Background="#FF9800"
+                            Foreground="White"
+                            Padding="6,4"
+                            Width="90"
+                            Cursor="Hand"/>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

@@ -1,0 +1,86 @@
+#####################################
+# Compiled files
+#####################################
+*.class
+*.jar
+*.war
+*.ear
+*.dll
+*.exe
+
+#####################################
+# Logs & Temporary files
+#####################################
+*.log
+*.tmp
+*.swp
+*~
+
+#####################################
+# Build folders
+#####################################
+bin/
+obj/
+out/
+artifacts/
+publish/
+dist/
+
+#####################################
+# User-specific files
+#####################################
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+#####################################
+# IDE & Editor folders
+#####################################
+.vs/
+.vscode/
+
+#####################################
+# .NET Core
+#####################################
+project.lock.json
+project.fragment.lock.json
+
+#####################################
+# NuGet packages
+#####################################
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+#####################################
+# Database files
+#####################################
+*.mdf
+*.ldf
+*.sqlite
+*.db
+*.db3
+*.sdf
+
+#####################################
+# Secret / Config / Environment files
+#####################################
+*.env
+*.key
+*.pfx
+*.pem
+*.cert
+secrets.json
+*.config
+
+# Ignore appsettings with environment or sensitive data
+appsettings.*.json
+!appsettings.json   # <-- keep this if it's your default non-secret config
+
+#####################################
+# Backup files
+#####################################
+*.bak
+*.old
+*.orig
