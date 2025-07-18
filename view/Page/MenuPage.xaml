@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="CAFEHOLIC.view.Page.MenuPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:CAFEHOLIC.view.Page"
+    Title="MenuPage">
+
+    <ScrollViewer Background="#f5f5f5" VerticalScrollBarVisibility="Auto">
+        <ItemsControl ItemsSource="{Binding Drinks}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        Width="200"
+                        Margin="10"
+                        Padding="10"
+                        Background="White"
+                        BorderBrush="Gray"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Effect="{StaticResource {x:Static SystemParameters.DropShadowKey}}">
+                        <StackPanel>
+                            <Image
+                                Height="120"
+                                Margin="0,0,0,10"
+                                ClipToBounds="True"
+                                Source="{Binding img}"
+                                Stretch="UniformToFill" />
+                            <TextBlock
+                                FontSize="16"
+                                FontWeight="Bold"
+                                Text="{Binding Name}"
+                                TextWrapping="Wrap" />
+                            <TextBlock
+                                Margin="0,5,0,0"
+                                FontWeight="SemiBold"
+                                Foreground="DarkGreen"
+                                Text="{Binding Price, StringFormat='Price: {0} VND'}" />
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </ScrollViewer>
+</Page>

@@ -15,6 +15,8 @@ public partial class Drink
 
     public bool? IsAvailable { get; set; }
 
+    public String img { get; set; } = string.Empty;
+
     public virtual ICollection<Menu> Menus { get; set; } = new List<Menu>();
 
     public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();

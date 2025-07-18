@@ -15,22 +15,14 @@ using System.Windows.Shapes;
 
 namespace CAFEHOLIC.view.Page
 {
-    public partial class HomePage : System.Windows.Controls.Page
+    /// <summary>
+    /// Interaction logic for MenuPage.xaml
+    /// </summary>
+    public partial class MenuPage : System.Windows.Controls.Page
     {
-        public HomePage()
+        public MenuPage()
         {
             InitializeComponent();
-            this.DataContext = new ViewModel.RecommendDrinkViewModel();
-        }
-
-        private void GoToRoomPage_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService?.Navigate(new RoomPage());
-        }
-
-        private void GoToMenuPage_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService?.Navigate(new MenuPage());
         }
     }
 }
