@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -29,6 +30,11 @@ namespace CAFEHOLIC.view.Page
         private void GoToRoomPage_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService?.Navigate(new RoomPage());
+        }
+
+        private void GoToMenuPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService?.Navigate(new MenuPage());
         }
     }
 }
