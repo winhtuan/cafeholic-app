@@ -33,6 +33,7 @@
                                 Opacity="0.4"
                                 ShadowDepth="4" />
                         </Border.Effect>
+
                         <StackPanel>
                             <Image
                                 Height="120"

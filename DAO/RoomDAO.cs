@@ -19,7 +19,11 @@ public class RoomDAO
     {
         try
         {
-            return _context.StudyRooms.Include(r => r.RoomType).ToList();
+            return _context.StudyRooms
+            .AsNoTracking()
+            .Include(r => r.RoomType)
+            .Include(r => r.Reservations)
+            .ToList();
         }
         catch (Exception ex)
         {
