@@ -17,12 +17,13 @@ namespace CAFEHOLIC.view.Page
 {
     public partial class MenuPage : System.Windows.Controls.Page
     {
+        private readonly ViewModel.ViewMenuVM viewModel;
+
         public MenuPage()
         {
             InitializeComponent();
-            this.DataContext = new ViewModel.ViewMenuVM();
+            viewModel = new ViewModel.ViewMenuVM();
+            this.DataContext = viewModel;
         }
-
-
     }
 }

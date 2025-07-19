@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using System;
 using System.IO;
 
@@ -20,6 +21,22 @@ namespace CAFEHOLIC.Utils
         public static string Get(string keyPath)
         {
             return configuration[keyPath];
+        }
+
+        public static Dictionary<string, string> LoadKeywordMapping()
+        {
+            try
+            {
+                var jsonPath = Path.Combine(Directory.GetCurrentDirectory(), "drinkKeywords.json");
+                var json = File.ReadAllText(jsonPath);
+                var dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
+                return new Dictionary<string, string>(dict, StringComparer.OrdinalIgnoreCase);
+            }
+            catch (Exception ex)
+            {
+                Logger.Error("DrinkLoader", "Failed to load drink keyword mappings", ex);
+                return new Dictionary<string, string>();
+            }
         }
     }
 }

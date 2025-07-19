@@ -20,9 +20,6 @@ using CAFEHOLIC.ViewModel;
 
 namespace CAFEHOLIC.view.Page
 {
-    /// <summary>
-    /// Interaction logic for RoomPage.xaml
-    /// </summary>
     public partial class RoomPage : System.Windows.Controls.Page
     {
         RoomDAO roomDAO = new RoomDAO(new DBContext().GetLogger<RoomDAO>());

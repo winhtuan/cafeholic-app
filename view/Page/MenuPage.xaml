@@ -228,7 +228,7 @@
                         BorderBrush="Transparent"
                         BorderThickness="0"
                         Command="{Binding CheckoutCommand}"
-                        Content="Thanh toán"
+                        Content="Xác Nhận"
                         Foreground="White"
                         Style="{StaticResource MaterialDesignRaisedButton}" />
 

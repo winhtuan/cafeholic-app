@@ -1,0 +1,108 @@
+﻿<Window
+    x:Class="CAFEHOLIC.view.BillDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Hóa đơn thanh toán"
+    Width="500"
+    Height="550"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!--  Title  -->
+        <TextBlock
+            Margin="0,0,0,10"
+            HorizontalAlignment="Center"
+            FontSize="20"
+            FontWeight="Bold"
+            Text="Chi tiết hóa đơn" />
+
+        <!--  Thời gian thanh toán  -->
+        <StackPanel Margin="0,0,0,10" HorizontalAlignment="Center">
+            <TextBlock FontSize="14" Text="{Binding PaymentTime, StringFormat='Ngày: {0:dd/MM/yyyy}'}" />
+            <TextBlock FontSize="14" Text="{Binding PaymentTime, StringFormat='Giờ: {0:HH:mm:ss}'}" />
+        </StackPanel>
+
+        <!--  Danh sách item  -->
+        <ListView
+            Grid.Row="1"
+            Margin="0,10,0,10"
+            ItemsSource="{Binding CartItems}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel Margin="0,5">
+                        <TextBlock
+                            Width="200"
+                            FontWeight="Medium"
+                            Text="{Binding Drink.Name}" />
+                        <TextBlock
+                            Width="50"
+                            HorizontalAlignment="Center"
+                            Text="{Binding Quantity}" />
+                        <TextBlock
+                            Width="100"
+                            HorizontalAlignment="Right"
+                            Text="{Binding TotalPrice, StringFormat='{}{0:N0}₫'}" />
+                    </DockPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!--  Tổng và các nút thanh toán  -->
+        <StackPanel Grid.Row="2" Margin="0,10,0,0">
+            <Separator Margin="0,10" />
+
+            <!--  Tổng tiền  -->
+            <StackPanel
+                Margin="0,0,0,10"
+                HorizontalAlignment="Right"
+                Orientation="Horizontal">
+                <TextBlock
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Text="Tổng tiền: " />
+                <TextBlock
+                    Margin="10,0,0,0"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Foreground="DarkGreen"
+                    Text="{Binding TotalAmount, StringFormat='{}{0:N0}₫'}" />
+            </StackPanel>
+
+            <!--  Buttons  -->
+            <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button
+                    Margin="0,0,10,0"
+                    Padding="12,6"
+                    BorderBrush="Red"
+                    Click="Cancel_Click"
+                    Content="Huỷ"
+                    Foreground="Red"
+                    Style="{StaticResource MaterialDesignOutlinedButton}" />
+                <Button
+                    Margin="0,0,10,0"
+                    Padding="12,6"
+                    BorderBrush="Green"
+                    Click="PayByCash_Click"
+                    Content="Tiền mặt"
+                    Foreground="Green"
+                    Style="{StaticResource MaterialDesignOutlinedButton}" />
+                <Button
+                    Padding="12,6"
+                    BorderBrush="Blue"
+                    Click="PayByQR_Click"
+                    Content="QR Code"
+                    Foreground="Blue"
+                    Style="{StaticResource MaterialDesignOutlinedButton}" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

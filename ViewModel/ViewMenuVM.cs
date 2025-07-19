@@ -7,30 +7,38 @@ using CAFEHOLIC.Utils;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 using CAFEHOLIC.Service;
+using CAFEHOLIC.view;
+using CAFEHOLIC.view.Page;
 
 namespace CAFEHOLIC.ViewModel
 {
     public class ViewMenuVM : ObservableObject
     {
         private readonly DrinkDAO drinkDAO;
+        private readonly OrderDAO orderDAO;
         private List<Drink> allDrinks = new();
         private string searchKeyword = string.Empty;
 
         public ObservableCollection<Drink> Drinks { get; set; } = new();
         public ObservableCollection<CartItem> CartItems { get; set; } = new();
         public decimal TotalPriceAll => CartItems?.Sum(item => (item.Drink.Price ?? 0) * item.Quantity) ?? 0;
+        public int CurrentUserID { get; }
 
         // Button
         public ICommand AddToCartCommand { get; }
-
         public ICommand RemoveFromCartCommand { get; }
         public ICommand VoiceOrderCommand { get; }
-
+        public ICommand CheckoutCommand { get; }
+        // Constructor
         public ViewMenuVM()
         {
+            this.CurrentUserID = AppSession.CurrentUserId;
             drinkDAO = new DrinkDAO(new DBContext(), new LoggerFactory().CreateLogger<DrinkDAO>());
+            orderDAO = new OrderDAO(new DBContext());
             AddToCartCommand = new RelayCommand<Drink>(AddToCart);
             RemoveFromCartCommand = new RelayCommand<CartItem>(RemoveFromCart);
+            VoiceOrderCommand = new AsyncRelayCommand(async () => await VoiceOrder());
+            CheckoutCommand = new AsyncRelayCommand(async () => await Checkout());
             LoadDrinks();
 
             CartItems.CollectionChanged += CartItems_CollectionChanged;
@@ -38,16 +46,28 @@ namespace CAFEHOLIC.ViewModel
             {
                 item.PropertyChanged += CartItem_PropertyChanged;
             }
-            VoiceOrderCommand = new AsyncRelayCommand(async () => await VoiceOrder());
         }
 
+        public Action? NavigateToRoomPageAction { get; set; }
+        private int? createdOrderId = null;
+        private async Task Checkout()
+        {
+            // 1. Tạo đơn hàng
+            Order createdOrder = await orderDAO.CreateOrderFromCart(CartItems.ToList(), CurrentUserID);
+            var dialog = new BillDialog(this.CartItems, createdOrder.OrderId)
+            {
+                DataContext = this
+            };
+        }
+
+        // Voice order functionality
         private async Task VoiceOrder()
         {
             var text = await SpeechToText.RecognizeOnceAsync();
 
             if (!string.IsNullOrWhiteSpace(text))
             {
-                Logger.Info($"Người dùng nói: {text}");
+                Logger.Info(nameof(ViewMenuVM), $"Người dùng nói: {text}");
 
                 var nlp = new NLPOrder();
 
@@ -57,30 +77,60 @@ namespace CAFEHOLIC.ViewModel
 
                     if (orders.Count == 0)
                     {
-                        Logger.Warn("Không nhận diện được món nào từ câu nói.");
+                        Logger.Warn(nameof(ViewMenuVM), "Không nhận diện được món nào từ câu nói.");
                         return;
                     }
 
+                    Logger.Info(nameof(ViewMenuVM), $"Tìm thấy {orders.Count} món:");
                     foreach (var (name, qty) in orders)
                     {
-                        Logger.Info($"Đặt: {qty} x {name}");
+                        Logger.Info(nameof(ViewMenuVM), $"  - {name} x{qty}");
                     }
 
-                    // Lưu JSON và upload lên S3
-                    string s3Url = await NLPOrder.SaveOrderToJsonAndUploadAsync(orders);
-                    Logger.Info($"Đơn hàng đã lưu và upload tại: {s3Url}");
+                    // Add items to cart
+                    foreach (var (name, qty) in orders)
+                    {
+                        var drink = allDrinks.FirstOrDefault(d =>
+                            string.Equals(d.Name, name, StringComparison.OrdinalIgnoreCase));
+
+                        if (drink != null)
+                        {
+                            var existing = CartItems.FirstOrDefault(c => c.Drink.DrinkId == drink.DrinkId);
+                            if (existing != null)
+                            {
+                                existing.Quantity += qty;
+                                Logger.Info(nameof(ViewMenuVM), $"Cập nhật số lượng {drink.Name}: {existing.Quantity}");
+                            }
+                            else
+                            {
+                                var item = new CartItem { Drink = drink, Quantity = qty };
+                                item.PropertyChanged += CartItem_PropertyChanged;
+                                CartItems.Add(item);
+                                Logger.Info(nameof(ViewMenuVM), $"Thêm mới vào giỏ hàng: {drink.Name} x{qty}");
+                            }
+                        }
+                        else
+                        {
+                            Logger.Warn(nameof(ViewMenuVM), $"Không tìm thấy đồ uống: {name}");
+                        }
+                    }
+
+                    // Update UI
+                    OnPropertyChanged(nameof(CartItems));
+                    OnPropertyChanged(nameof(TotalPriceAll));
                 }
                 catch (Exception ex)
                 {
-                    Logger.Error("Lỗi khi phân tích đơn hàng", ex);
+                    Logger.Error(nameof(ViewMenuVM), "Lỗi khi phân tích đơn hàng", ex);
                 }
             }
             else
             {
-                Logger.Warn("Không nhận được nội dung từ giọng nói.");
+                Logger.Warn(nameof(ViewMenuVM), "Không nhận được nội dung từ giọng nói.");
             }
         }
 
+        // Search functionality
         public string SearchKeyword
         {
             get => searchKeyword;
@@ -92,13 +142,13 @@ namespace CAFEHOLIC.ViewModel
                 }
             }
         }
-
+        // Load all drinks from the database
         private void LoadDrinks()
         {
             allDrinks = drinkDAO.GetAllDrinks();
             drinkDAO.ApplySearch(searchKeyword, allDrinks, Drinks);
         }
-
+        // Event handlers for CartItems and CartItem changes
         private void CartItem_PropertyChanged(object? sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == nameof(CartItem.Quantity) || e.PropertyName == nameof(CartItem.Drink))
@@ -140,7 +190,7 @@ namespace CAFEHOLIC.ViewModel
                 CartItems.Add(item);
             }
         }
-
+        // Remove an item from the cart
         private void RemoveFromCart(CartItem? item)
         {
             if (item == null) return;

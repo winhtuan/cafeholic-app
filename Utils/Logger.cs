@@ -13,18 +13,18 @@ namespace CAFEHOLIC.Utils
         {
             try
             {
-                // Đảm bảo log nằm trong thư mục bin/Debug/net8.0-windows/logs
                 string baseDir = AppContext.BaseDirectory;
                 logDirectory = Path.Combine(baseDir, "logs");
 
                 if (!Directory.Exists(logDirectory))
-                {
                     Directory.CreateDirectory(logDirectory);
-                    Console.WriteLine("Đã tạo thư mục log tại: " + logDirectory);
+
+                if (File.Exists(logFilePath))
+                {
+                    File.Delete(logFilePath);
                 }
 
-                logFilePath = Path.Combine(logDirectory, $"log_{DateTime.Now:yyyyMMdd}.txt");
-                Console.WriteLine("Ghi log vào: " + logFilePath);
+                logFilePath = Path.Combine(logDirectory, $"LOG_{DateTime.Now:dd/MM/yyyy}.txt");
             }
             catch (Exception ex)
             {
@@ -32,19 +32,17 @@ namespace CAFEHOLIC.Utils
             }
         }
 
-        public static void Info(string message) => WriteLog("INFO", message);
-
-        public static void Warn(string message) => WriteLog("WARN", message);
-
-        public static void Error(string message, Exception ex = null)
+        public static void Info(string className, string message) => WriteLog("INFO", className, message);
+        public static void Warn(string className, string message) => WriteLog("WARN", className, message);
+        public static void Error(string className, string message, Exception ex = null)
         {
             var fullMessage = ex == null ? message : $"{message}\nException: {ex}";
-            WriteLog("ERROR", fullMessage);
+            WriteLog("ERROR", className, fullMessage);
         }
 
-        private static void WriteLog(string level, string message)
+        private static void WriteLog(string level, string className, string message)
         {
-            string logEntry = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] [{level}] {message}";
+            string logEntry = $"[{DateTime.Now:dd/MM/yyyy HH:mm:ss}] [{level}] [{className}] {message}";
 
             lock (_lock)
             {
@@ -58,9 +56,9 @@ namespace CAFEHOLIC.Utils
                     Console.WriteLine("Log lỗi: " + logEntry);
                 }
 
-                // In ra Output Debug luôn
                 Console.WriteLine(logEntry);
             }
         }
+
     }
 }
