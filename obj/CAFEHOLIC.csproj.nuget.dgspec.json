@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\CAFEHOLIC.csproj": {}
+    "C:\\Users\\Admin\\Source\\Repos\\cafeholic-app\\CAFEHOLIC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\CAFEHOLIC.csproj": {
+    "C:\\Users\\Admin\\Source\\Repos\\cafeholic-app\\CAFEHOLIC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\CAFEHOLIC.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\cafeholic-app\\CAFEHOLIC.csproj",
         "projectName": "CAFEHOLIC",
-        "projectPath": "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\CAFEHOLIC.csproj",
-        "packagesPath": "C:\\Users\\winhtuan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Source\\Repos\\cafeholic-app\\CAFEHOLIC.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\Repos\\cafeholic-app\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\winhtuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -71,17 +70,17 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.6, )"
+              "version": "[9.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[9.0.6, )"
+              "version": "[9.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.6, )"
+              "version": "[9.0.7, )"
             },
             "Microsoft.Extensions.Logging.Console": {
               "target": "Package",
@@ -123,7 +122,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
