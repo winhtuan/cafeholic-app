@@ -1,8 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using CAFEHOLIC.DAO;
-using System.Windows.Controls;
-using CAFEHOLIC.Models;
 using CAFEHOLIC.Model;
 namespace CAFEHOLIC.view.Page
 {

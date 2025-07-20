@@ -1,4 +1,4 @@
-﻿using CAFEHOLIC.Models;
+﻿using CAFEHOLIC.Model;
 using System;
 using System.Windows;
 using System.Windows.Controls;
