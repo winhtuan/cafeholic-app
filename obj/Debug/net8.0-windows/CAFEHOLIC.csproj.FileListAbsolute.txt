@@ -789,3 +789,17 @@ C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\refin
 C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\CAFEHOLIC.pdb
 C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\CAFEHOLIC.genruntimeconfig.cache
 C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\ref\CAFEHOLIC.dll
+C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\view\Page\DrinkEditPage.baml
+C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\view\Page\EditBookingWindow.baml
+C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\view\Page\BookingManager.g.cs
+C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\view\Page\DrinkEditPage.g.cs
+C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\view\Page\DrinkManagementPage.g.cs
+C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\view\Page\EditBookingWindow.g.cs
+C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\view\Page\RoomEditPage.g.cs
+C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\view\Page\RoomManagementPage.g.cs
+C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\view\Page\RoomTypeEditPage.g.cs
+C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\view\Page\BookingManager.baml
+C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\view\Page\DrinkManagementPage.baml
+C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\view\Page\RoomEditPage.baml
+C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\view\Page\RoomManagementPage.baml
+C:\Users\winhtuan\Downloads\Project\cafeholic-app\obj\Debug\net8.0-windows\view\Page\RoomTypeEditPage.baml

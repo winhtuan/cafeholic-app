@@ -109,7 +109,7 @@ namespace CAFEHOLIC.ViewModel
             Logger.Info(_className, "Constructor started");
             try
             {
-                var dbContext = new dao.DBContext();
+                var dbContext = new DAO.DBContext();
                 var logger = App.LoggerFactory.CreateLogger<DrinkDAO>();
                 var drinkDAO = new DrinkDAO(dbContext, logger);
                 _drinkService = new DrinkService(drinkDAO, App.LoggerFactory.CreateLogger<DrinkService>());

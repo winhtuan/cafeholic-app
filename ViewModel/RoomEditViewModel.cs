@@ -98,7 +98,7 @@ namespace CAFEHOLIC.ViewModel
             Logger.Info(_className, "Constructor started");
             try
             {
-                _roomTypeDAO = new RoomTypeDAO(new dao.DBContext().GetLogger<RoomTypeDAO>());
+                _roomTypeDAO = new RoomTypeDAO(new DAO.DBContext().GetLogger<RoomTypeDAO>());
                 _roomTypes = new ObservableCollection<RoomType>(_roomTypeDAO.GetAllRoomTypes());
                 SaveCommand = new RelayCommand<object>(Save, CanSave);
                 CancelCommand = new RelayCommand<object>(Cancel, _ => true);

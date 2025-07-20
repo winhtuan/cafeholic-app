@@ -1,5 +1,4 @@
 ﻿using CAFEHOLIC;
-using CAFEHOLIC.dao;
 using CAFEHOLIC.DAO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;

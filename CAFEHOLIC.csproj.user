@@ -15,7 +15,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="view\Page\DrinkEditPage.xaml.cs">
+		<SubType>Code</SubType>
+	</Compile>
     <Compile Update="view\Page\Admin\AdminPage.xaml.cs">
+		<SubType>Code</SubType>
+	</Compile>
     <Compile Update="view\Page\BookingManager.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

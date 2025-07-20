@@ -131,7 +131,7 @@ namespace CAFEHOLIC.ViewModel
             Logger.Info(_className, "Constructor started");
             try
             {
-                var dbContext = new dao.DBContext();
+                var dbContext = new DAO.DBContext();
                 _roomDAO = new RoomDAO(dbContext.GetLogger<RoomDAO>());
                 _roomTypeDAO = new RoomTypeDAO(dbContext.GetLogger<RoomTypeDAO>());
                 _pagedRooms = new ObservableCollection<RoomViewModel>();

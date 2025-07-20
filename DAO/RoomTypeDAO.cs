@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using CAFEHOLIC.Model;
-using CAFEHOLIC.dao;
 
 namespace CAFEHOLIC.DAO
 {
