@@ -16,6 +16,7 @@ namespace CAFEHOLIC.Utils
         }
 
         public bool CanExecute(object? parameter) =>
+
             canExecute == null || parameter is T t && canExecute(t) || parameter == null;
 
         public void Execute(object? parameter)

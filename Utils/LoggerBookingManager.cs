@@ -1,15 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.IO;
 
 namespace CAFEHOLIC.Utils
 {
-    public static class Logger
+    public static class LoggerBookingManager
     {
         private static readonly object _lock = new object();
         private static readonly string logDirectory;
         private static readonly string logFilePath;
 
-        static Logger()
+        static LoggerBookingManager()
         {
             try
             {
@@ -19,13 +23,10 @@ namespace CAFEHOLIC.Utils
                 if (!Directory.Exists(logDirectory))
                     Directory.CreateDirectory(logDirectory);
 
-                if (File.Exists(logFilePath))
-                {
-                    File.Delete(logFilePath);
-                }
+                logFilePath = Path.Combine(logDirectory, $"log_{DateTime.Now:yyyyMMdd}.txt");
 
-                logFilePath = Path.Combine(logDirectory, $"LOG_{DateTime.Now:dd/MM/yyyy}.txt");
-
+                // Không nên xóa file mỗi lần chạy → giữ log theo ngày
+                // File.Delete(logFilePath); ❌ bỏ dòng này đi
             }
             catch (Exception ex)
             {
@@ -43,8 +44,7 @@ namespace CAFEHOLIC.Utils
 
         private static void WriteLog(string level, string className, string message)
         {
-
-            string logEntry = $"[{DateTime.Now:dd/MM/yyyy HH:mm:ss}] [{level}] [{className}] {message}";
+            string logEntry = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] [{level}] [{className}] {message}";
 
             lock (_lock)
             {
@@ -58,9 +58,8 @@ namespace CAFEHOLIC.Utils
                     Console.WriteLine("Log lỗi: " + logEntry);
                 }
 
-                Console.WriteLine(logEntry);
+                Console.WriteLine(logEntry); // Console cho dev thấy luôn
             }
         }
-
     }
 }
