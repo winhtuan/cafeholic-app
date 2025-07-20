@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using CAFEHOLIC.Utils;
 
 namespace CAFEHOLIC.Model;
 
@@ -18,4 +19,22 @@ public partial class OrderItem
     public virtual Drink? Drink { get; set; }
 
     public virtual Order? Order { get; set; }
+}
+
+public class CartItem : ObservableObject
+{
+    public Drink Drink { get; set; }
+    public decimal TotalPrice => (Drink.Price ?? 0) * Quantity;
+
+    private int quantity = 1;
+    public int Quantity
+    {
+        get => quantity;
+        set
+        {
+            if (value < 1) value = 1; 
+            SetProperty(ref quantity, value);
+            OnPropertyChanged(nameof(TotalPrice)); 
+        }
+    }
 }

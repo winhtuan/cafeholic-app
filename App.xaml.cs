@@ -2,7 +2,6 @@
 using System.Windows;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
-using CAFEHOLIC.dao;
 using CAFEHOLIC;
 
 namespace CAFEHOLIC
