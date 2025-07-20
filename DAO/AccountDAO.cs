@@ -38,7 +38,7 @@ public class AccountDAO
     {
         try
         {
-            return _context.Accounts.FirstOrDefault(a => a.PhoneNumber == phone && a.PasswordHash == password && a.IsVerified == true);
+            return _context.Accounts.Include(a => a.Role).FirstOrDefault(a => a.PhoneNumber == phone && a.PasswordHash == password && a.IsVerified == true);
         }
         catch (Exception ex)
         {

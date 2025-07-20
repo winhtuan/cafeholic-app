@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\CAFEHOLIC.csproj": {}
+    "C:\\Users\\winhtuan\\Downloads\\Project\\cafeholic-app\\CAFEHOLIC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\CAFEHOLIC.csproj": {
+    "C:\\Users\\winhtuan\\Downloads\\Project\\cafeholic-app\\CAFEHOLIC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\CAFEHOLIC.csproj",
+        "projectUniqueName": "C:\\Users\\winhtuan\\Downloads\\Project\\cafeholic-app\\CAFEHOLIC.csproj",
         "projectName": "CAFEHOLIC",
-        "projectPath": "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\CAFEHOLIC.csproj",
+        "projectPath": "C:\\Users\\winhtuan\\Downloads\\Project\\cafeholic-app\\CAFEHOLIC.csproj",
         "packagesPath": "C:\\Users\\winhtuan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\obj\\",
+        "outputPath": "C:\\Users\\winhtuan\\Downloads\\Project\\cafeholic-app\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -51,6 +51,14 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "AWSSDK.Core": {
+              "target": "Package",
+              "version": "[4.0.0.16, )"
+            },
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[4.0.6, )"
+            },
             "MaterialDesignColors": {
               "target": "Package",
               "version": "[5.2.1, )"
@@ -82,6 +90,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.6, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.7, )"
             },
             "Microsoft.Extensions.Logging.Console": {
               "target": "Package",

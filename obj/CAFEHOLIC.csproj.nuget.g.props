@@ -23,5 +23,7 @@
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\winhtuan\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.4</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\winhtuan\.nuget\packages\microsoft.entityframeworkcore.tools\9.0.6</PkgMicrosoft_EntityFrameworkCore_Tools>
     <PkgMaterialDesignThemes Condition=" '$(PkgMaterialDesignThemes)' == '' ">C:\Users\winhtuan\.nuget\packages\materialdesignthemes\5.2.1</PkgMaterialDesignThemes>
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">C:\Users\winhtuan\.nuget\packages\awssdk.core\4.0.0.16</PkgAWSSDK_Core>
+    <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">C:\Users\winhtuan\.nuget\packages\awssdk.s3\4.0.6</PkgAWSSDK_S3>
   </PropertyGroup>
 </Project>
