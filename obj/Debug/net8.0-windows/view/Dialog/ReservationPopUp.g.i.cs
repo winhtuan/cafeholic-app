@@ -52,7 +52,7 @@ namespace CAFEHOLIC.view.Dialog {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CAFEHOLIC;V1.0.0.0;component/view/dialog/reservationpopup.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CAFEHOLIC;component/view/dialog/reservationpopup.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\view\Dialog\ReservationPopUp.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
