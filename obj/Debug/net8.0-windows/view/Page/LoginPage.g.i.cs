@@ -104,7 +104,7 @@ namespace CAFEHOLIC.view.Page {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CAFEHOLIC;component/view/page/loginpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CAFEHOLIC;V1.0.0.0;component/view/page/loginpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\view\Page\LoginPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
