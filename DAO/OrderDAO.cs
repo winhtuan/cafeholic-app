@@ -3,22 +3,136 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CAFEHOLIC.dao;
 using CAFEHOLIC.Model;
+using CAFEHOLIC.Utils; 
 using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Logging;
 
 namespace CAFEHOLIC.DAO
 {
     public class OrderDAO
     {
-        private readonly ILogger<OrderDAO> logger;
         private readonly DBContext context;
-        public OrderDAO(DBContext dBContext, ILogger<OrderDAO> logger)
+
+        public OrderDAO(DBContext dBContext)
         {
             this.context = dBContext;
-            this.logger = logger;
         }
+
+        public void updateStatus(String Status, int orderId)
+        {
+            try
+            {
+                using (var conn = context.GetConnection())
+                {
+                    string query = "UPDATE [Order] SET Status = @Status WHERE OrderId = @OrderId";
+                    using (var cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Status", Status);
+                        cmd.Parameters.AddWithValue("@OrderId", orderId);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(nameof(OrderDAO), "Lỗi khi cập nhật trạng thái đơn hàng.", ex);
+                throw;
+            }
+        }
+
+        public async Task<Order> CreateOrderFromCart(List<CartItem> cartItems, int? userId = null, int? voucherId = null)
+        {
+            if (cartItems == null || !cartItems.Any())
+            {
+                Logger.Error(nameof(OrderDAO), "Tạo đơn hàng thất bại: Giỏ hàng đang trống.");
+                throw new ArgumentException("Giỏ hàng đang trống.");
+            }
+
+            Order order = null;
+
+            try
+            {
+                using (var conn = context.GetConnection())
+                {
+                    using (var tran = conn.BeginTransaction())
+                    {
+                        try
+                        {
+                            // 1. Tính tổng tiền
+                            decimal total = cartItems.Sum(item => item.TotalPrice);
+
+                            // 2. Thêm đơn hàng
+                            string insertOrderSql = @"
+                                INSERT INTO [Order] (UserId, OrderDate, TotalAmount, Status, VoucherId)
+                                OUTPUT INSERTED.OrderId
+                                VALUES (@UserId, @OrderDate, @TotalAmount, @Status, @VoucherId)";
+
+                            int orderId;
+                            using (var cmd = new SqlCommand(insertOrderSql, conn, tran))
+                            {
+                                cmd.Parameters.AddWithValue("@UserId", (object?)userId);
+                                cmd.Parameters.AddWithValue("@OrderDate", DateTime.Now);
+                                cmd.Parameters.AddWithValue("@TotalAmount", total);
+                                cmd.Parameters.AddWithValue("@Status", "Chờ Thanh Toán");
+                                cmd.Parameters.AddWithValue("@VoucherId", (object?)voucherId ?? DBNull.Value);
+
+                                orderId = (int)cmd.ExecuteScalar();
+                            }
+
+                            // 3. Thêm các OrderItem
+                            foreach (var item in cartItems)
+                            {
+                                string insertItemSql = @"
+                                    INSERT INTO OrderItem (OrderId, DrinkId, Quantity, Price)
+                                    VALUES (@OrderId, @DrinkId, @Quantity, @Price)";
+                                using (var cmd = new SqlCommand(insertItemSql, conn, tran))
+                                {
+                                    cmd.Parameters.AddWithValue("@OrderId", orderId);
+                                    cmd.Parameters.AddWithValue("@DrinkId", item.Drink.DrinkId);
+                                    cmd.Parameters.AddWithValue("@Quantity", item.Quantity);
+                                    cmd.Parameters.AddWithValue("@Price", item.Drink.Price);
+                                    cmd.ExecuteNonQuery();
+                                }
+                            }
+
+                            // 4. Commit transaction
+                            tran.Commit();
+
+                            // 5. Trả về Order vừa tạo
+                            order = new Order
+                            {
+                                OrderId = orderId,
+                                UserId = userId,
+                                VoucherId = voucherId,
+                                OrderDate = DateTime.Now,
+                                TotalAmount = total,
+                                Status = "Pending",
+                                OrderItems = cartItems.Select(ci => new OrderItem
+                                {
+                                    DrinkId = ci.Drink.DrinkId,
+                                    Quantity = ci.Quantity,
+                                    Price = ci.Drink.Price
+                                }).ToList()
+                            };
+                        }
+                        catch (Exception ex)
+                        {
+                            tran.Rollback();
+                            Logger.Error(nameof(OrderDAO), "Lỗi khi tạo đơn hàng trong transaction.", ex);
+                            throw;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(nameof(OrderDAO), "Lỗi kết nối hoặc xử lý đơn hàng.", ex);
+                throw;
+            }
+
+            return order;
+        }
+
         public List<Order> GetOrderByUserID(int userId)
         {
             List<Order> orders = new List<Order>();
@@ -78,10 +192,9 @@ namespace CAFEHOLIC.DAO
             }
             catch (Exception ex)
             {
-                logger.LogError(ex, "Lỗi khi lấy đơn hàng theo user.");
+                Logger.Error(nameof(OrderDAO), "Lỗi khi lấy đơn hàng theo user.", ex);
             }
             return orders;
         }
-
     }
 }

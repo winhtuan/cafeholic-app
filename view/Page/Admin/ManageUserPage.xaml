@@ -1,0 +1,142 @@
+﻿<Page x:Class="CAFEHOLIC.view.Page.ManageUserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CAFEHOLIC.view.Page"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ManageUserPage">
+
+    <Page.Resources>
+        <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#336699"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="Margin" Value="5,0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                        Background="{TemplateBinding Background}"
+                        CornerRadius="6"
+                        Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"
+                                      RecognizesAccessKey="True"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#4477AA"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#224466"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Background" Value="#CCCCCC"/>
+                                <Setter Property="Foreground" Value="#777"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Border Background="White" CornerRadius="20" Padding="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Tiêu đề -->
+            <TextBlock Text="👥 Quản lý Người dùng"
+                       FontSize="26"
+                       FontWeight="Bold"
+                       Foreground="#2c3e50"
+                       Margin="0,0,0,20"/>
+
+            <!-- Thanh tìm kiếm -->
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,0,20">
+                <Grid Width="300" Height="35" Background="#f0f0f0">
+                    <TextBox x:Name="txtSearch"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Padding="8,0"
+                             FontSize="14"
+                             VerticalContentAlignment="Center"
+                             TextChanged="txtSearch_TextChanged"/>
+                    <TextBlock x:Name="txtPlaceholder"
+                               Text="Nhập tên hoặc số điện thoại..."
+                               Foreground="Gray"
+                               Margin="10,0,0,0"
+                               VerticalAlignment="Center"
+                               IsHitTestVisible="False"
+                               Visibility="Visible"/>
+                </Grid>
+                <Button Content="➕ Thêm mới"
+        Width="120"
+        Height="35"
+        Background="#28a745"
+        Foreground="White"
+        FontWeight="Bold"
+        Margin="10,0,0,0"
+        Click="AddButton_Click"/>
+            </StackPanel>
+
+            <!-- Bảng người dùng -->
+            <DataGrid x:Name="dataGridUser"
+                      Grid.Row="2"
+                      AutoGenerateColumns="False"
+                      CanUserAddRows="False"
+                      HeadersVisibility="Column"
+                      Margin="0,0,0,10"
+                      ColumnHeaderHeight="35"
+                      RowHeight="45"
+                      FontSize="14"
+                      GridLinesVisibility="None"
+                      AlternatingRowBackground="#f9f9f9"
+                      Background="White"
+                      BorderThickness="0"
+                      HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="60"/>
+                    <DataGridTextColumn Header="Họ tên" Binding="{Binding FullName}" Width="*"/>
+                    <DataGridTextColumn Header="SĐT" Binding="{Binding PhoneNumber}" Width="160"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="200"/>
+                    <DataGridTemplateColumn Header="Hành động" Width="180">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Button Content="✏️ Sửa" 
+                                            Style="{StaticResource PrimaryButtonStyle}" 
+                                            Click="EditButton_Click"/>
+                                    <Button Content="🗑️ Xóa" 
+                                            Style="{StaticResource PrimaryButtonStyle}" 
+                                            Background="#e74c3c"
+                                            Click="DeleteButton_Click"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBlock x:Name="txtNoResult"
+           Grid.Row="3"
+           Text="Không tìm thấy kết quả nào."
+           Foreground="Red"
+           FontStyle="Italic"
+           FontSize="14"
+           Visibility="Collapsed"
+           HorizontalAlignment="Center"
+           Margin="5"/>
+        </Grid>
+    </Border>
+</Page>

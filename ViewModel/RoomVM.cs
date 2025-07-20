@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Input;
-using CAFEHOLIC.dao;
 using CAFEHOLIC.DAO;
 namespace CAFEHOLIC.ViewModel
 {

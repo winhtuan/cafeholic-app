@@ -2,13 +2,20 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="view\AdminWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="view\Dialog\ReservationPopUp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Dialog\UserDialog.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="view\HomeWindown.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="view\Page\DrinkEditPage.xaml.cs">
+    <Compile Update="view\Page\Admin\AdminPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="view\Page\ForgotPasswordPage.xaml.cs">
@@ -18,6 +25,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="view\Page\LoginPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Page\Admin\ManageStaffPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Page\Admin\ManageUserPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="view\Page\MenuPage.xaml.cs">

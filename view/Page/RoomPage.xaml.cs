@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CAFEHOLIC.dao;
 using CAFEHOLIC.DAO;
 using CAFEHOLIC.Model;
 using CAFEHOLIC.view.Dialog;
@@ -21,9 +20,6 @@ using CAFEHOLIC.ViewModel;
 
 namespace CAFEHOLIC.view.Page
 {
-    /// <summary>
-    /// Interaction logic for RoomPage.xaml
-    /// </summary>
     public partial class RoomPage : System.Windows.Controls.Page
     {
         RoomDAO roomDAO = new RoomDAO(new DBContext().GetLogger<RoomDAO>());

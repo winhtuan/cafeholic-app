@@ -6,7 +6,7 @@ using System;
 using System.Configuration;
 using System.Data;
 
-namespace CAFEHOLIC.dao
+namespace CAFEHOLIC.DAO
 {
     public class DBContext
     {

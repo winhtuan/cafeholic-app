@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
 using System.Windows;
+using CAFEHOLIC;
 
 namespace CAFEHOLIC
 {

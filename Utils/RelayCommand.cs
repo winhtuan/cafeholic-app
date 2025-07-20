@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace CAFEHOLIC.Utils
@@ -83,3 +84,4 @@ namespace CAFEHOLIC.Utils
             CommandManager.InvalidateRequerySuggested();
     }
 }
+

@@ -24,7 +24,7 @@ namespace CAFEHOLIC.Utils
                     File.Delete(logFilePath);
                 }
 
-                logFilePath = Path.Combine(logDirectory, $"log_{DateTime.Now:yyyyMMdd}.txt");
+                logFilePath = Path.Combine(logDirectory, $"LOG_{DateTime.Now:dd/MM/yyyy}.txt");
             }
             catch (Exception ex)
             {
@@ -42,7 +42,7 @@ namespace CAFEHOLIC.Utils
 
         private static void WriteLog(string level, string className, string message)
         {
-            string logEntry = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] [{level}] [{className}] {message}";
+            string logEntry = $"[{DateTime.Now:dd/MM/yyyy HH:mm:ss}] [{level}] [{className}] {message}";
 
             lock (_lock)
             {
