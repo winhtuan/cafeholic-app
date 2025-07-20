@@ -31,7 +31,11 @@
                     Height="300"
                     Margin="30"
                     VerticalAlignment="Top"
+<<<<<<< HEAD
                     Source="/IMG/bg_login.png"
+=======
+                    Source="https://cafeholic-imgs.s3.ap-southeast-1.amazonaws.com/drinks/bg_login.png"
+>>>>>>> origin/develop
                     Stretch="Fill" />
             </StackPanel>
             <StackPanel Width="350">

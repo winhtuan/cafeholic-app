@@ -2,15 +2,25 @@
     x:Class="CAFEHOLIC.view.Page.HomePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+<<<<<<< HEAD
     xmlns:av="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:CAFEHOLIC.view.Page"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="DrinkVM"
     mc:Ignorable="av">
+=======
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:CAFEHOLIC.view.Page"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="DrinkVM"
+    mc:Ignorable="d">
+>>>>>>> origin/develop
 
     <Grid Margin="20" Background="#f5f5f5">
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <StackPanel>
+<<<<<<< HEAD
                 <StackPanel
                     Margin="0,0,0,15"
                     HorizontalAlignment="Left"
@@ -44,9 +54,27 @@
                     TextWrapping="Wrap" />
 
                 <!--  Danh sách đồ uống gợi ý  -->
+=======
+                <!--  Câu dẫn từ Gemini  -->
+                <TextBlock
+                    Margin="0,0,0,15"
+                    FontSize="18"
+                    FontWeight="SemiBold"
+                    Foreground="DarkSlateGray"
+                    Text="{Binding SuggestionText}"
+                    TextWrapping="Wrap" />
+
+>>>>>>> origin/develop
                 <ItemsControl ItemsSource="{Binding RecommendedDrinks}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
+<<<<<<< HEAD
                             <Border
                                 Margin="5"
                                 Padding="10"
@@ -71,6 +99,75 @@
                                         Text="{Binding Price, StringFormat='Price: {0}VND'}" />
                                 </StackPanel>
                             </Border>
+=======
+                            <materialDesign:Card
+                                Width="400"
+                                Height="150"
+                                Margin="10"
+                                Padding="10"
+                                materialDesign:ColorZoneAssist.Mode="PrimaryLight"
+                                materialDesign:ElevationAssist.Elevation="Dp2"
+                                Background="White">
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!--  Ảnh vuông bên trái  -->
+                                    <Image
+                                        Width="130"
+                                        Height="130"
+                                        Margin="0,0,10,0"
+                                        ClipToBounds="True"
+                                        Source="{Binding img}"
+                                        Stretch="UniformToFill" />
+
+                                    <!--  Nội dung bên phải  -->
+                                    <Grid Grid.Column="1" Margin="0,10,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <!--  Tên và Giá  -->
+                                        <StackPanel
+                                            Grid.Row="0"
+                                            Margin="0,0,0,5"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Center"
+                                            Orientation="Horizontal">
+
+                                            <TextBlock
+                                                Margin="0,0,5,0"
+                                                VerticalAlignment="Center"
+                                                FontSize="16"
+                                                FontWeight="Bold"
+                                                Style="{DynamicResource MaterialDesignHeadline6TextBlock}"
+                                                Text="{Binding Name}" />
+
+                                            <TextBlock
+                                                VerticalAlignment="Center"
+                                                FontSize="16"
+                                                FontWeight="SemiBold"
+                                                Foreground="{DynamicResource PrimaryHueMidBrush}"
+                                                Style="{DynamicResource MaterialDesignBody1TextBlock}"
+                                                Text="{Binding Price, StringFormat='Giá: ${0}'}" />
+                                        </StackPanel>
+
+
+                                        <!--  Mô tả  -->
+                                        <TextBlock
+                                            Grid.Row="1"
+                                            FontSize="13"
+                                            Foreground="Gray"
+                                            Text="{Binding Description}"
+                                            TextWrapping="Wrap" />
+                                    </Grid>
+                                </Grid>
+                            </materialDesign:Card>
+>>>>>>> origin/develop
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>

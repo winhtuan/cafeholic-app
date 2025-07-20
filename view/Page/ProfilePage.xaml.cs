@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -16,17 +15,12 @@ using System.Windows.Shapes;
 
 namespace CAFEHOLIC.view.Page
 {
-    public partial class HomePage : System.Windows.Controls.Page
+    public partial class ProfilePage : System.Windows.Controls.Page
     {
-        public HomePage()
+        public ProfilePage()
         {
             InitializeComponent();
-            //this.DataContext = new ViewModel.RecommendDrinkViewModel();
-        }
-
-        private void GoToMenuPage_Click(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService?.Navigate(new MenuPage());
+            this.DataContext = new ViewModel.ProfileVM();
         }
     }
 }

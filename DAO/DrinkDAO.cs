@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CAFEHOLIC.dao;
 using CAFEHOLIC.Model;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
@@ -54,6 +54,16 @@ namespace CAFEHOLIC.DAO
             }
             return drinks;
         }
-
+        public void ApplySearch(String SearchKeyword, List<Drink> allDrinks, ObservableCollection<Drink> Drinks)
+        {
+            var filtered = string.IsNullOrWhiteSpace(SearchKeyword)
+                ? allDrinks
+                : allDrinks.Where(d => d.Name != null && d.Name.Contains(SearchKeyword, StringComparison.OrdinalIgnoreCase)).ToList();
+            Drinks.Clear();
+            foreach (var drink in filtered)
+            {
+                Drinks.Add(drink);
+            }
+        }
     }
 }

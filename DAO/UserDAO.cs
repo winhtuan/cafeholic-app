@@ -9,7 +9,7 @@ using CAFEHOLIC.DAO;
 using Microsoft.Extensions.Logging;
 using CAFEHOLIC.Model;
 
-namespace CAFEHOLIC.dao
+namespace CAFEHOLIC.DAO
 {
     class UserDAO
     {
@@ -47,6 +47,7 @@ namespace CAFEHOLIC.dao
             }
         }
 
+<<<<<<< HEAD
         public List<User> GetListStaff()
         {
             var listStaff = new List<User>();
@@ -206,5 +207,39 @@ namespace CAFEHOLIC.dao
         }
 
 
+=======
+        public User? GetUserByPhone(string phoneNumber)
+        {
+            logger.LogInformation("Lấy thông tin người dùng với số điện thoại: {PhoneNumber}", phoneNumber);
+            try
+            {
+                using (var conn = context.GetConnection())
+                {
+                    string query = "SELECT Id, PhoneNumber, FullName FROM [User] WHERE PhoneNumber = @PhoneNumber";
+                    using (var cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@PhoneNumber", phoneNumber);
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                return new User
+                                {
+                                    Id = reader.GetInt32(0),
+                                    PhoneNumber = reader.GetString(1),
+                                    FullName = reader.GetString(2)
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Lỗi khi lấy thông tin người dùng.");
+            }
+            return null;
+        }
+>>>>>>> origin/develop
     }
 }

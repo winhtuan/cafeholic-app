@@ -1,52 +1,61 @@
-# Compiled class files
+#####################################
+# Compiled files
+#####################################
 *.class
-
-# Log files
-*.log
-
-# Package files
 *.jar
 *.war
 *.ear
+*.dll
+*.exe
 
-# Build Folders (bin, obj, out)
+#####################################
+# Logs & Temporary files
+#####################################
+*.log
+*.tmp
+*.swp
+*~
+
+#####################################
+# Build folders
+#####################################
 bin/
 obj/
 out/
+artifacts/
+publish/
+dist/
 
+#####################################
 # User-specific files
+#####################################
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
 
-# Visual Studio folders
+#####################################
+# IDE & Editor folders
+#####################################
 .vs/
 .vscode/
 
-# Backup & temp files
-*~
-*.swp
-*.tmp
-
+#####################################
 # .NET Core
+#####################################
 project.lock.json
 project.fragment.lock.json
-artifacts/
 
-# NuGet Packages
+#####################################
+# NuGet packages
+#####################################
 *.nupkg
-# The packages folder can be ignored because of Package Restore
 **/packages/*
-# except build/, which is used as an MSBuild target.
 !**/packages/build/
-# Uncomment if necessary however generally it will be regenerated when needed
-#**/project.lock.json
 
-# Visual Studio Code settings
-.vscode/
-
+#####################################
 # Database files
+#####################################
 *.mdf
 *.ldf
 *.sqlite
@@ -54,19 +63,25 @@ artifacts/
 *.db3
 *.sdf
 
-# Secret, key, credential files
-secrets.json
+#####################################
+# Secret / Config / Environment files
+#####################################
+*.env
 *.key
 *.pfx
 *.pem
 *.cert
-*.env
+secrets.json
 *.config
-appsettings.Development.json
-appsettings.Local.json
+
+# Ignore all appsettings files (including default)
+appsettings.json
 appsettings.*.json
 appsettings.json
 
-# Publish output
-publish/
-dist/
+#####################################
+# Backup files
+#####################################
+*.bak
+*.old
+*.orig

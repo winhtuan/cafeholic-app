@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 namespace CAFEHOLIC.view.Page
 {
+<<<<<<< HEAD
     /// <summary>
     /// Interaction logic for MenuPage.xaml
     /// </summary>
@@ -23,6 +24,17 @@ namespace CAFEHOLIC.view.Page
         public MenuPage()
         {
             InitializeComponent();
+=======
+    public partial class MenuPage : System.Windows.Controls.Page
+    {
+        private readonly ViewModel.ViewMenuVM viewModel;
+
+        public MenuPage()
+        {
+            InitializeComponent();
+            viewModel = new ViewModel.ViewMenuVM();
+            this.DataContext = viewModel;
+>>>>>>> origin/develop
         }
     }
 }

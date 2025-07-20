@@ -15,9 +15,6 @@ using CAFEHOLIC.view.Page;
 
 namespace CAFEHOLIC.view
 {
-    /// <summary>
-    /// Interaction logic for HomeWindown.xaml
-    /// </summary>
     public partial class HomeWindown : Window
     {
         public HomeWindown()
@@ -36,5 +33,19 @@ namespace CAFEHOLIC.view
             this.Close();
         }
 
+        private void GoToRoomPage_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new RoomPage());
+        }
+
+        private void GoToMenuPage_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new MenuPage());
+        }
+
+        private void ProfilePage_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new ProfilePage());
+        }
     }
 }

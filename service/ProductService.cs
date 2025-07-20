@@ -1,5 +1,4 @@
 ﻿using System;
-using CAFEHOLIC.dao;
 using CAFEHOLIC.DAO;
 using CAFEHOLIC.Model;
 using CAFEHOLIC.view;
@@ -32,7 +31,7 @@ namespace CAFEHOLIC.service
                 .ToList();
 
             // 2. Lấy lịch sử đơn hàng
-            OrderDAO orderDAO = new OrderDAO(new DBContext(), new DBContext().GetLogger<OrderDAO>());
+            OrderDAO orderDAO = new OrderDAO(new DBContext());
             List<Order> orders = orderDAO.GetOrderByUserID(userID);
 
             // 3. Thống kê tần suất đồ uống đã mua

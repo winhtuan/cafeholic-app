@@ -5,7 +5,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using CAFEHOLIC;
 
-namespace CAFEHOLIC.dao
+namespace CAFEHOLIC.DAO
 {
     public class DBContext
     {
