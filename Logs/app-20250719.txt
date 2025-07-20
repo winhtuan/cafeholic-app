@@ -1,0 +1,763 @@
+2025-07-19T14:45:58.6386215+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Overcast
+- Nhiệt độ: 29°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T14:48:51.9243754+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Overcast
+- Nhiệt độ: 29°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T15:09:05.1310107+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Overcast
+- Nhiệt độ: 29.2°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T15:11:24.7265829+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Overcast
+- Nhiệt độ: 29.2°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T15:20:22.9180898+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Overcast
+- Nhiệt độ: 29.3°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Trà đào cam sả
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T15:40:30.4851148+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Overcast
+- Nhiệt độ: 29.3°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Trà đào cam sả
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T15:53:53.0228248+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Overcast
+- Nhiệt độ: 29.1°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T16:14:00.3300469+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Overcast
+- Nhiệt độ: 29.1°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T16:22:31.3878249+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Overcast
+- Nhiệt độ: 30.2°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T16:23:05.0461567+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Overcast
+- Nhiệt độ: 30.2°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T16:33:12.6509365+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Overcast
+- Nhiệt độ: 30.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T16:35:58.9217156+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Overcast
+- Nhiệt độ: 30.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T16:50:15.8439669+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Overcast
+- Nhiệt độ: 30.1°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T16:55:42.8055125+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Overcast
+- Nhiệt độ: 30.1°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T17:03:34.7907261+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 30.2°C
+
+Danh sách đồ uống có sẵn của quán:
+Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T17:03:34.9166652+07:00  [INF] [GetTotalDrinks] Total drinks with IsAvailable = 1: 31 (d918cae3)
+2025-07-19T17:41:01.6900199+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 29.2°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T17:41:02.0718433+07:00  [ERR] [GetTotalDrinks] Error counting total drinks. (2364c8d6)
+System.InvalidOperationException: The connection was not closed. The connection's current state is open.
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at CAFEHOLIC.DAO.DrinkDAO.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\DAO\DrinkDAO.cs:line 114
+   at CAFEHOLIC.Service.DrinkService.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\service\DrinkService.cs:line 50
+2025-07-19T17:41:02.0726259+07:00  [ERR] Lỗi khi đếm tổng số đồ uống từ service. (986f8e30)
+System.InvalidOperationException: The connection was not closed. The connection's current state is open.
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at CAFEHOLIC.DAO.DrinkDAO.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\DAO\DrinkDAO.cs:line 114
+   at CAFEHOLIC.Service.DrinkService.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\service\DrinkService.cs:line 50
+2025-07-19T20:38:22.1736031+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 27.1°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T20:38:23.0795464+07:00  [ERR] [GetTotalDrinks] Error counting total drinks. (2364c8d6)
+System.InvalidOperationException: The connection was not closed. The connection's current state is open.
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at CAFEHOLIC.DAO.DrinkDAO.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\DAO\DrinkDAO.cs:line 114
+   at CAFEHOLIC.Service.DrinkService.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\service\DrinkService.cs:line 50
+2025-07-19T20:38:23.0802426+07:00  [ERR] Lỗi khi đếm tổng số đồ uống từ service. (986f8e30)
+System.InvalidOperationException: The connection was not closed. The connection's current state is open.
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at CAFEHOLIC.DAO.DrinkDAO.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\DAO\DrinkDAO.cs:line 114
+   at CAFEHOLIC.Service.DrinkService.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\service\DrinkService.cs:line 50
+   at CAFEHOLIC.ViewModel.DrinkManagementViewModel.LoadDrinks() in E:\K5\PRN212\Cafeholic\ViewModel\DrinkManagementViewModel.cs:line 128
+2025-07-19T20:38:30.3059363+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 27.1°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T21:31:56.7582991+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 27.2°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T21:31:58.9717176+07:00  [ERR] [GetTotalDrinks] Error counting total drinks. (2364c8d6)
+System.InvalidOperationException: The connection was not closed. The connection's current state is open.
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at CAFEHOLIC.DAO.DrinkDAO.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\DAO\DrinkDAO.cs:line 114
+   at CAFEHOLIC.Service.DrinkService.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\service\DrinkService.cs:line 50
+2025-07-19T21:31:58.9723784+07:00  [ERR] Lỗi khi đếm tổng số đồ uống từ service. (986f8e30)
+System.InvalidOperationException: The connection was not closed. The connection's current state is open.
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at CAFEHOLIC.DAO.DrinkDAO.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\DAO\DrinkDAO.cs:line 114
+   at CAFEHOLIC.Service.DrinkService.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\service\DrinkService.cs:line 50
+2025-07-19T21:41:49.6937542+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 27.2°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T21:41:50.1223669+07:00  [ERR] [GetTotalDrinks] Error counting total drinks. (2364c8d6)
+System.InvalidOperationException: The connection was not closed. The connection's current state is open.
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at CAFEHOLIC.DAO.DrinkDAO.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\DAO\DrinkDAO.cs:line 114
+   at CAFEHOLIC.Service.DrinkService.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\service\DrinkService.cs:line 50
+2025-07-19T21:41:50.1230498+07:00  [ERR] Lỗi khi đếm tổng số đồ uống từ service. (986f8e30)
+System.InvalidOperationException: The connection was not closed. The connection's current state is open.
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at CAFEHOLIC.DAO.DrinkDAO.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\DAO\DrinkDAO.cs:line 114
+   at CAFEHOLIC.Service.DrinkService.GetTotalDrinks() in E:\K5\PRN212\Cafeholic\service\DrinkService.cs:line 50
+   at CAFEHOLIC.ViewModel.DrinkManagementViewModel.LoadDrinks() in E:\K5\PRN212\Cafeholic\ViewModel\DrinkManagementViewModel.cs:line 128
+2025-07-19T21:54:09.9036713+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-19T21:54:09.9266534+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-19T21:54:11.1384751+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 27.2°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T21:54:11.2893010+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T21:54:11.2997985+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T21:54:11.3016003+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-19T21:54:11.3111255+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-19T22:00:21.1470842+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-19T22:00:21.1615665+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-19T22:00:22.3133452+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 27.2°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T22:00:22.5793725+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T22:00:22.5845288+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T22:00:22.5862377+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-19T22:00:22.5903861+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-19T22:03:43.8206319+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-19T22:03:43.8289022+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-19T22:03:44.8984723+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Patchy rain nearby
+- Nhiệt độ: 27°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T22:03:45.0156626+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T22:03:45.0186702+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T22:03:45.0200785+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-19T22:03:45.0223234+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-19T22:36:07.5269611+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-19T22:36:07.5469230+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-19T22:36:08.5536917+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Patchy rain nearby
+- Nhiệt độ: 27°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T22:36:09.2569361+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T22:36:09.2807169+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T22:36:09.2825574+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-19T22:36:09.2945397+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-19T23:17:56.0015634+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-19T23:17:56.0253781+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-19T23:17:57.1872917+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:17:57.1951137+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:17:57.1963624+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-19T23:17:57.2035200+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-19T23:17:57.2643592+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Patchy rain nearby
+- Nhiệt độ: 27°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T23:17:59.2079409+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:17:59.2090000+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:17:59.2091904+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 2, PageSize: 10 (8bf4f50c)
+2025-07-19T23:17:59.2096771+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 2, pageSize 10. (66bd377f)
+2025-07-19T23:18:00.9375506+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:18:00.9383024+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:18:00.9386065+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 3, PageSize: 10 (8bf4f50c)
+2025-07-19T23:18:00.9394500+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 3, pageSize 10. (eb16cd08)
+2025-07-19T23:18:01.5292621+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:18:01.5297538+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:18:01.5298590+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 4, PageSize: 10 (8bf4f50c)
+2025-07-19T23:18:01.5303252+07:00  [INF] [GetPagedDrinks] Loaded 2 drinks for page 4, pageSize 10. (f2f80cf9)
+2025-07-19T23:18:50.3123526+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-19T23:18:50.3238950+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-19T23:18:50.9364440+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:18:50.9488079+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:18:50.9490614+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-19T23:18:50.9521289+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-19T23:18:51.0728445+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Patchy rain nearby
+- Nhiệt độ: 27°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T23:18:54.0837280+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:18:54.0862280+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:18:54.0864712+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 2, PageSize: 10 (8bf4f50c)
+2025-07-19T23:18:54.0883479+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 2, pageSize 10. (66bd377f)
+2025-07-19T23:18:57.1656379+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:18:57.1662480+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:18:57.1664293+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 3, PageSize: 10 (8bf4f50c)
+2025-07-19T23:18:57.1670841+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 3, pageSize 10. (eb16cd08)
+2025-07-19T23:24:02.1648841+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-19T23:24:02.1903935+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-19T23:24:03.3520386+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Patchy rain nearby
+- Nhiệt độ: 27°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T23:24:05.1946286+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:24:05.2005595+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:24:05.2016951+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-19T23:24:05.2089476+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-19T23:24:06.4887722+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:24:06.4901396+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:24:06.4904190+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 2, PageSize: 10 (8bf4f50c)
+2025-07-19T23:24:06.4910369+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 2, pageSize 10. (66bd377f)
+2025-07-19T23:24:07.6545279+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:24:07.6552896+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:24:07.6555670+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 3, PageSize: 10 (8bf4f50c)
+2025-07-19T23:24:07.6562506+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 3, pageSize 10. (eb16cd08)
+2025-07-19T23:24:08.6408463+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:24:08.6416941+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:24:08.6420103+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 4, PageSize: 10 (8bf4f50c)
+2025-07-19T23:24:08.6426380+07:00  [INF] [GetPagedDrinks] Loaded 2 drinks for page 4, pageSize 10. (f2f80cf9)
+2025-07-19T23:33:28.6029804+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-19T23:33:28.6339753+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-19T23:33:29.8665881+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Patchy rain nearby
+- Nhiệt độ: 27°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-19T23:33:30.2908529+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:30.2999402+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:30.3011399+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:30.3165734+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-19T23:33:31.2122100+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:31.2152479+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:31.2154776+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 2, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:31.2177648+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 2, pageSize 10. (66bd377f)
+2025-07-19T23:33:31.9644567+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:31.9683260+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:31.9685629+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:31.9700728+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-19T23:33:32.7340745+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:32.7366690+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:32.7368800+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 2, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:32.7400858+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 2, pageSize 10. (66bd377f)
+2025-07-19T23:33:33.0861458+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:33.0903790+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:33.0907334+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 3, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:33.0932753+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 3, pageSize 10. (eb16cd08)
+2025-07-19T23:33:33.5286955+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:33.5313381+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:33.5315821+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 4, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:33.5329261+07:00  [INF] [GetPagedDrinks] Loaded 2 drinks for page 4, pageSize 10. (f2f80cf9)
+2025-07-19T23:33:34.0774747+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:34.0801735+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:34.0803981+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 3, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:34.0819275+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 3, pageSize 10. (eb16cd08)
+2025-07-19T23:33:34.2481273+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:34.2486407+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:34.2487511+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 2, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:34.2493009+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 2, pageSize 10. (66bd377f)
+2025-07-19T23:33:34.4299941+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:34.4423038+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:34.4427987+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:34.4488289+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-19T23:33:35.2005922+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:35.2024115+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:35.2026432+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 2, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:35.2041566+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 2, pageSize 10. (66bd377f)
+2025-07-19T23:33:35.3660557+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:35.3665697+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:35.3667153+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 3, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:35.3672981+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 3, pageSize 10. (eb16cd08)
+2025-07-19T23:33:35.7797788+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:35.7829048+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:35.7831746+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 4, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:35.7855158+07:00  [INF] [GetPagedDrinks] Loaded 2 drinks for page 4, pageSize 10. (f2f80cf9)
+2025-07-19T23:33:36.5921875+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:36.5970651+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:36.5973696+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 3, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:36.5993394+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 3, pageSize 10. (eb16cd08)
+2025-07-19T23:33:36.7607716+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:36.7627949+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:36.7629950+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 2, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:36.7655830+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 2, pageSize 10. (66bd377f)
+2025-07-19T23:33:37.9820589+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-19T23:33:38.0074830+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-19T23:33:38.0081049+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-19T23:33:38.0163572+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)

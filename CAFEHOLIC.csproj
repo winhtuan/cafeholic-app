@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AWSSDK.S3" Version="4.0.5.1" />
+    <PackageReference Include="AWSSDK.S3" Version="4.0.6" />
     <PackageReference Include="Azure.AI.OpenAI" Version="2.1.0" />
     <PackageReference Include="Azure.Core" Version="1.47.1" />
     <PackageReference Include="AWSSDK.Core" Version="4.0.0.16" />
@@ -36,6 +36,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.7" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.7" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="9.0.6" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.7" />
@@ -44,6 +45,7 @@
     <PackageReference Include="System.Net.Http.Json" Version="9.0.7" />
     <PackageReference Include="Twilio" Version="7.11.3" />
   </ItemGroup>
+
 	<ItemGroup>
 		<None Update="appsettings.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -52,4 +54,5 @@
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
+   
 </Project>
