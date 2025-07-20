@@ -12,6 +12,23 @@
     <Grid Margin="20" Background="#f5f5f5">
         <ScrollViewer VerticalScrollBarVisibility="Auto">
             <StackPanel>
+                <!--                     <Button
+                        Width="150"
+                        Height="40"
+                        Background="#FFA500"
+                        Click="GoToMenuPage_Click"
+                        Content="🥤 Menu"
+                        FontWeight="Bold"
+                        Foreground="White" />
+                    <Button
+                        Width="200"
+                        Height="40"
+                        Margin="10,0,0,0"
+                        Background="#673AB7"
+                        Click="GoToDrinkManagementPage_Click"
+                        Content="⚙️ Management Drink"
+                        FontWeight="Bold"
+                        Foreground="White" />-->
                 <!--  Câu dẫn từ Gemini  -->
                 <TextBlock
                     Margin="0,0,0,15"
