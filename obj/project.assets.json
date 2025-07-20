@@ -6611,23 +6611,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\winhtuan\\.nuget\\packages\\": {},
+    "C:\\Users\\ACER\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\CAFEHOLIC.csproj",
+      "projectUniqueName": "C:\\Users\\ACER\\source\\repos\\New folder\\cafeholic-app\\CAFEHOLIC.csproj",
       "projectName": "CAFEHOLIC",
-      "projectPath": "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\CAFEHOLIC.csproj",
-      "packagesPath": "C:\\Users\\winhtuan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\winhtuan\\Downloads\\cafeholic-app\\obj\\",
+      "projectPath": "C:\\Users\\ACER\\source\\repos\\New folder\\cafeholic-app\\CAFEHOLIC.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ACER\\source\\repos\\New folder\\cafeholic-app\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\winhtuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
