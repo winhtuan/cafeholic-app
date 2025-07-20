@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\Admin\Downloads\cafeholic\App.xaml
-11-1051372247
+12448095894
 
-72499660537
-2481451553365
-view\Dialog\ReservationPopUp.xaml;view\HomeWindown.xaml;view\LoginWindown.xaml;view\Page\BookingManager.xaml;view\Page\ForgotPasswordPage.xaml;view\Page\HomePage.xaml;view\Page\LoginPage.xaml;view\Page\RegisterPage.xaml;view\Page\ResetPasswordPage.xaml;view\Page\RoomPage.xaml;view\Page\VerifyPage.xaml;
+731103574528
+255-1541200177
+view\Dialog\ReservationPopUp.xaml;view\HomeWindown.xaml;view\LoginWindown.xaml;view\Page\BookingManager.xaml;view\Page\EditBookingWindow.xaml;view\Page\ForgotPasswordPage.xaml;view\Page\HomePage.xaml;view\Page\LoginPage.xaml;view\Page\RegisterPage.xaml;view\Page\ResetPasswordPage.xaml;view\Page\RoomPage.xaml;view\Page\VerifyPage.xaml;
 
-True
+False
 

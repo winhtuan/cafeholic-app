@@ -17,14 +17,14 @@
         </Grid.RowDefinitions>
 
         <!-- Tiêu đề -->
-        <TextBlock Text="Quản lý đặt phòng" FontSize="24" FontWeight="Bold" Foreground="#444" Margin="0,0,0,10"/>
+        <TextBlock Text="Booking Manage" FontSize="24" FontWeight="Bold" Foreground="#444" Margin="0,0,0,10"/>
 
         <!-- Bộ lọc -->
         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,0,10">
-            <TextBlock Text="Ngày:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBlock Text="Day:" VerticalAlignment="Center" Margin="0,0,5,0"/>
             <DatePicker x:Name="dpFilterDate" Margin="0,0,10,0"/>
 
-            <TextBlock Text="Trạng thái:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <TextBlock Text="Status:" VerticalAlignment="Center" Margin="0,0,5,0"/>
             <ComboBox x:Name="cbStatusFilter" Width="150" Margin="0,0,10,0">
                 <ComboBoxItem Content="Tất cả"/>
                 <ComboBoxItem Content="Chờ xác nhận"/>
@@ -32,20 +32,20 @@
                 <ComboBoxItem Content="Đã huỷ"/>
             </ComboBox>
 
-            <Button Content="Lọc" Padding="10,2" Click="Filter_Click" Margin="0,0,10,0"/>
-            <Button Content="Làm mới" Padding="10,2" Click="Refresh_Click"/>
+            <Button Content="Filter" Padding="10,2" Click="Filter_Click" Margin="0,0,10,0"/>
+            <Button Content="Refresh" Padding="10,2" Click="Refresh_Click"/>
         </StackPanel>
 
         <!-- Danh sách đặt bàn -->
         <DataGrid x:Name="dgBookings" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True"
                   AlternatingRowBackground="#F5F5F5" CanUserAddRows="False" SelectionMode="Single">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Mã đặt" Binding="{Binding ReservationId}" Width="*" />
+                <DataGridTextColumn Header="Booking ID" Binding="{Binding ReservationId}" Width="*" />
                 <DataGridTextColumn Header="UserId" Binding="{Binding UserId}" Width="*" />
                 <DataGridTextColumn Header="RoomId" Binding="{Binding RoomId}" Width="*" />
-                <DataGridTextColumn Header="Bắt đầu" Binding="{Binding StartTime}" Width="1.5*" />
-                <DataGridTextColumn Header="Kết thúc" Binding="{Binding EndTime}" Width="1.5*" />
-                <DataGridTextColumn Header="Trạng thái" Binding="{Binding Status}" Width="*" />
+                <DataGridTextColumn Header="Start Time" Binding="{Binding StartTime}" Width="1.5*" />
+                <DataGridTextColumn Header="End Time" Binding="{Binding EndTime}" Width="1.5*" />
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*" />
             </DataGrid.Columns>
         </DataGrid>
 

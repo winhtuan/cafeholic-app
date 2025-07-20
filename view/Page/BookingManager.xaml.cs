@@ -90,29 +90,37 @@ namespace CAFEHOLIC.view
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            // var addWindow = new EditBookingWindow();
-            // if (addWindow.ShowDialog() == true)
-            // {
-            //     LoadReservations();
-            //     Logger.Info("BookingManage", "Đã thêm đặt phòng mới");
-            // }
+            // Truyền null hoặc tạo Reservation trống để báo hiệu "Thêm mới"
+            var addWindow = new EditBookingWindow(null);
+
+            if (addWindow.ShowDialog() == true)
+            {
+                Reservation newReservation = addWindow.UpdatedReservation;
+
+                AddReservationToDatabase(newReservation);
+
+                LoadReservations();
+                Logger.Info("BookingManage", $"Đã thêm đặt phòng mới (UserID: {newReservation.UserId}, RoomID: {newReservation.RoomId})");
+            }
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            // if (dgBookings.SelectedItem is Reservation selected)
-            // {
-            //     var editWindow = new EditBookingWindow(selected);
-            //     if (editWindow.ShowDialog() == true)
-            //     {
-            //         LoadReservations();
-            //         Logger.Info("BookingManage", $"Cập nhật đặt phòng ID {selected.ReservationId}");
-            //     }
-            // }
-            // else
-            // {
-            //     MessageBox.Show("Vui lòng chọn một dòng để sửa", "Thông báo");
-            // }
+            if (dgBookings.SelectedItem is Reservation selected)
+            {
+                var editWindow = new EditBookingWindow(selected);
+                if (editWindow.ShowDialog() == true)
+                {
+                    Reservation updated = editWindow.UpdatedReservation;
+                    UpdateReservationInDatabase(updated);
+                    LoadReservations();
+                    Logger.Info("BookingManage", $"Cập nhật đặt phòng ID {updated.ReservationId}");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một dòng để sửa", "Thông báo");
+            }
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
@@ -140,5 +148,52 @@ namespace CAFEHOLIC.view
                 MessageBox.Show("Vui lòng chọn một dòng để xoá", "Thông báo");
             }
         }
+        private void UpdateReservationInDatabase(Reservation reservation)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                string query = @"
+            UPDATE Reservation
+            SET 
+                UserId = @UserId,
+                RoomId = @RoomId,
+                StartTime = @StartTime,
+                EndTime = @EndTime,
+                Status = @Status
+            WHERE ReservationId = @ReservationId";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@UserId", reservation.UserId);
+                cmd.Parameters.AddWithValue("@RoomId", reservation.RoomId);
+                cmd.Parameters.AddWithValue("@StartTime", reservation.StartTime);
+                cmd.Parameters.AddWithValue("@EndTime", reservation.EndTime);
+                cmd.Parameters.AddWithValue("@Status", reservation.Status);
+                cmd.Parameters.AddWithValue("@ReservationId", reservation.ReservationId);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+        private void AddReservationToDatabase(Reservation reservation)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                string query = @"
+            INSERT INTO Reservation (UserId, RoomId, StartTime, EndTime, Status)
+            VALUES (@UserId, @RoomId, @StartTime, @EndTime, @Status)";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@UserId", reservation.UserId);
+                cmd.Parameters.AddWithValue("@RoomId", reservation.RoomId);
+                cmd.Parameters.AddWithValue("@StartTime", reservation.StartTime);
+                cmd.Parameters.AddWithValue("@EndTime", reservation.EndTime);
+                cmd.Parameters.AddWithValue("@Status", reservation.Status);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
     }
 }

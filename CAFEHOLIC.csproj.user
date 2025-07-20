@@ -11,6 +11,9 @@
     <Compile Update="view\Page\BookingManager.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="view\Page\EditBookingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="view\Page\ForgotPasswordPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

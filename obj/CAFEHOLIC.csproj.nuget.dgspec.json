@@ -50,6 +50,10 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[4.0.6, )"
+            },
             "MaterialDesignColors": {
               "target": "Package",
               "version": "[5.2.1, )"
@@ -79,6 +83,14 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[9.0.7, )"
             },
