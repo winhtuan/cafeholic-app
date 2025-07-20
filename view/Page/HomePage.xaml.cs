@@ -21,7 +21,7 @@ namespace CAFEHOLIC.view.Page
         public HomePage()
         {
             InitializeComponent();
-            this.DataContext = new ViewModel.RecommendDrinkViewModel();
+            //this.DataContext = new ViewModel.RecommendDrinkViewModel();
         }
 
         private void GoToRoomPage_Click(object sender, RoutedEventArgs e)
@@ -32,6 +32,16 @@ namespace CAFEHOLIC.view.Page
         private void GoToMenuPage_Click(object sender, RoutedEventArgs e)
         {
             this.NavigationService?.Navigate(new MenuPage());
+        }
+
+        private void GoToDrinkManagementPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService?.Navigate(new DrinkManagementPage());
+        }
+
+        private void GoToRoomManagementPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService?.Navigate(new RoomManagementPage());
         }
     }
 }

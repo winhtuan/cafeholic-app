@@ -8,6 +8,9 @@
     <Compile Update="view\HomeWindown.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="view\Page\DrinkEditPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="view\Page\ForgotPasswordPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -20,13 +23,25 @@
     <Compile Update="view\Page\MenuPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="view\Page\DrinkManagementPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="view\Page\RegisterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="view\Page\ResetPasswordPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="view\Page\RoomEditPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Page\RoomManagementPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="view\Page\RoomPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Page\RoomTypeEditPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="view\Page\VerifyPage.xaml.cs">

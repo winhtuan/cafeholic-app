@@ -32,6 +32,24 @@
                         Content="🥤 Menu"
                         FontWeight="Bold"
                         Foreground="White" />
+                    <Button
+                        Width="200"
+                        Height="40"
+                        Margin="10,0,0,0"
+                        Background="#673AB7"
+                        Click="GoToDrinkManagementPage_Click"
+                        Content="⚙️ Management Drink"
+                        FontWeight="Bold"
+                        Foreground="White" />
+                    <Button
+                        Width="200"
+                        Height="40"
+                        Margin="10,0,0,0"
+                        Background="#00CCFF"
+                        Click="GoToRoomManagementPage_Click"
+                        Content="⚙️ Management Room"
+                        FontWeight="Bold"
+                        Foreground="White" />
                 </StackPanel>
 
                 <!--  Câu dẫn từ Gemini  -->
