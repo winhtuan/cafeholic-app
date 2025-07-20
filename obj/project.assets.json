@@ -15,7 +15,7 @@
           }
         }
       },
-      "AWSSDK.S3/4.0.5.1": {
+      "AWSSDK.S3/4.0.6": {
         "type": "package",
         "dependencies": {
           "AWSSDK.Core": "[4.0.0.16, 5.0.0)"
@@ -2670,17 +2670,17 @@
         "tools/account-management.ps1"
       ]
     },
-    "AWSSDK.S3/4.0.5.1": {
-      "sha512": "6ZO1ZoWIhjK+aYbNrLK1glM621tF/tYziGb8bpMIssAv6xqvpHTs1DxvLlO49CMPxXOKamMevTQd77MajQ9Jvg==",
+    "AWSSDK.S3/4.0.6": {
+      "sha512": "Ppjsacj1efQn/92YfvWKU7fO+gYAEzIsFU5Wp6TK9ls8ZgSWwyXSt2CsJCEvf6CCv55fXoP3KTDkvZr+CBPwZQ==",
       "type": "package",
-      "path": "awssdk.s3/4.0.5.1",
+      "path": "awssdk.s3/4.0.6",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "analyzers/dotnet/cs/AWSSDK.S3.CodeAnalysis.dll",
         "analyzers/dotnet/cs/SharedAnalysisCode.dll",
-        "awssdk.s3.4.0.5.1.nupkg.sha512",
+        "awssdk.s3.4.0.6.nupkg.sha512",
         "awssdk.s3.nuspec",
         "images/AWSLogo.png",
         "lib/net472/AWSSDK.S3.dll",
@@ -7626,7 +7626,7 @@
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
       "AWSSDK.Core >= 4.0.0.16",
-      "AWSSDK.S3 >= 4.0.5.1",
+      "AWSSDK.S3 >= 4.0.6",
       "Azure.AI.OpenAI >= 2.1.0",
       "Azure.Core >= 1.47.1",
       "MaterialDesignColors >= 5.2.1",
@@ -7638,6 +7638,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.6",
       "Microsoft.Extensions.Configuration >= 9.0.7",
+      "Microsoft.Extensions.Configuration.FileExtensions >= 9.0.7",
       "Microsoft.Extensions.Configuration.Json >= 9.0.7",
       "Microsoft.Extensions.Logging.Console >= 9.0.6",
       "Microsoft.Extensions.Logging.Debug >= 9.0.7",
@@ -7704,7 +7705,7 @@
           },
           "AWSSDK.S3": {
             "target": "Package",
-            "version": "[4.0.5.1, )"
+            "version": "[4.0.6, )"
           },
           "Azure.AI.OpenAI": {
             "target": "Package",
@@ -7751,6 +7752,10 @@
             "version": "[9.0.6, )"
           },
           "Microsoft.Extensions.Configuration": {
+            "target": "Package",
+            "version": "[9.0.7, )"
+          },
+          "Microsoft.Extensions.Configuration.FileExtensions": {
             "target": "Package",
             "version": "[9.0.7, )"
           },

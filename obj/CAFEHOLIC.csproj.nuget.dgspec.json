@@ -57,7 +57,7 @@
             },
             "AWSSDK.S3": {
               "target": "Package",
-              "version": "[4.0.5.1, )"
+              "version": "[4.0.6, )"
             },
             "Azure.AI.OpenAI": {
               "target": "Package",
@@ -104,6 +104,10 @@
               "version": "[9.0.6, )"
             },
             "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
               "target": "Package",
               "version": "[9.0.7, )"
             },
