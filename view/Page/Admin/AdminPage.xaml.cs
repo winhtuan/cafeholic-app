@@ -42,12 +42,12 @@ namespace CAFEHOLIC.view.Page.Admin
 
         private void ManageRoom_Checked(object sender, RoutedEventArgs e)
         {
-           
+            this.NavigationService?.Navigate(new RoomManagementPage());
         }
 
         private void ManageDrink_Checked(object sender, RoutedEventArgs e)
         {
-            
+            this.NavigationService?.Navigate(new DrinkManagementPage());
         }
 
         private void Booking_Checked(object sender, RoutedEventArgs e)
