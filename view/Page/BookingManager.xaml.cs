@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using CAFEHOLIC.Models;
+using CAFEHOLIC.Model; 
 using CAFEHOLIC.Utils;
 using CAFEHOLIC.view;
 
