@@ -1,0 +1,81 @@
+﻿<Page x:Class="CAFEHOLIC.view.Page.UserPage.ProfileUser"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CAFEHOLIC.view.Page.UserPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+      Title="ProfileUser">
+
+    <Page.Resources>
+        <!-- Style: Label -->
+        <Style x:Key="LabelStyle" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="#555"/>
+        </Style>
+
+        <!-- Style: Value -->
+        <Style x:Key="ValueStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Foreground" Value="#222"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+        </Style>
+
+        <!-- Style: Button -->
+        <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#FF6B6B"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="6">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="#D2691E">
+        <Border Background="White" CornerRadius="20" Padding="30" Width="500" 
+                HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel>
+                <TextBlock Text="User Profile" FontSize="22" FontWeight="Bold" Foreground="#333" 
+                           HorizontalAlignment="Center" Margin="0,0,0,20"/>
+
+                <Grid Margin="0,0,0,10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Full Name:" Grid.Row="0" Grid.Column="0" Style="{StaticResource LabelStyle}"/>
+                    <TextBlock x:Name="txtFullName" Grid.Row="0" Grid.Column="1" Style="{StaticResource ValueStyle}"/>
+
+                    <TextBlock Text="Email:" Grid.Row="1" Grid.Column="0" Style="{StaticResource LabelStyle}"/>
+                    <TextBlock x:Name="txtEmail" Grid.Row="1" Grid.Column="1" Style="{StaticResource ValueStyle}"/>
+
+                    <TextBlock Text="Phone Number:" Grid.Row="2" Grid.Column="0" Style="{StaticResource LabelStyle}"/>
+                    <TextBlock x:Name="txtPhone" Grid.Row="2" Grid.Column="1" Style="{StaticResource ValueStyle}"/>
+                </Grid>
+
+                <Button Content="Edit Profile" Style="{StaticResource PrimaryButtonStyle}" 
+                        HorizontalAlignment="Center" Click="EditProfile_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

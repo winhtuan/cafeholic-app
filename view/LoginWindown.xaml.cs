@@ -19,6 +19,8 @@ namespace CAFEHOLIC.view
     public static class AppSession
     {
         public static int CurrentUserId { get; set; } = 1;
+        public static User? CurrentUser { get; set; }
+
         public static readonly ILogger<ProductService> logger=new DBContext().GetLogger<ProductService>();
     }
 

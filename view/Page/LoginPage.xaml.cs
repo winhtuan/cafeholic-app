@@ -54,7 +54,12 @@ namespace CAFEHOLIC.view.Page
             if (acc != null)
             {
                 AppSession.CurrentUserId = acc.AccId;
-                string roleName = acc.Role?.RoleName ?? string.Empty;
+
+                using var context = new CafeholicContext();
+                var user = context.Users.FirstOrDefault(u => u.Id == acc.UserId);
+                AppSession.CurrentUser = user;
+
+                string roleName = acc.Role?.RoleName ?? string.Empty;               
                 Debug.WriteLine("RoleName: " + roleName);
                 if (roleName.Equals("Admin", StringComparison.OrdinalIgnoreCase))
                 {
