@@ -1,0 +1,218 @@
+2025-07-20T00:17:24.5977473+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-20T00:17:24.6136279+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-20T00:17:25.6616675+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 27.2°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-20T00:17:25.7481018+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T00:17:25.7531146+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T00:17:25.7544793+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-20T00:17:25.7595804+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-20T00:17:27.8975532+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T00:17:27.8999350+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T00:17:27.9000746+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 2, PageSize: 10 (8bf4f50c)
+2025-07-20T00:17:27.9017091+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 2, pageSize 10. (66bd377f)
+2025-07-20T00:17:28.5944697+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T00:17:28.6010673+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T00:17:28.6013941+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 3, PageSize: 10 (8bf4f50c)
+2025-07-20T00:17:28.6047705+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 3, pageSize 10. (eb16cd08)
+2025-07-20T00:17:28.7339421+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T00:17:28.7432895+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T00:17:28.7436576+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 4, PageSize: 10 (8bf4f50c)
+2025-07-20T00:17:28.7612696+07:00  [INF] [GetPagedDrinks] Loaded 2 drinks for page 4, pageSize 10. (f2f80cf9)
+2025-07-20T00:17:29.5405767+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T00:17:29.5431693+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T00:17:29.5435193+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 3, PageSize: 10 (8bf4f50c)
+2025-07-20T00:17:29.5467227+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 3, pageSize 10. (eb16cd08)
+2025-07-20T00:17:29.6872683+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T00:17:29.6893399+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T00:17:29.6896550+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 2, PageSize: 10 (8bf4f50c)
+2025-07-20T00:17:29.6929648+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 2, pageSize 10. (66bd377f)
+2025-07-20T00:17:30.7435658+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T00:17:30.7452223+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T00:17:30.7454268+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-20T00:17:30.7470551+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-20T00:17:32.4459936+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T00:17:32.4477935+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T00:17:32.4480130+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 2, PageSize: 10 (8bf4f50c)
+2025-07-20T00:17:32.4495260+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 2, pageSize 10. (66bd377f)
+2025-07-20T00:17:32.9480387+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T00:17:32.9497100+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T00:17:32.9498610+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 3, PageSize: 10 (8bf4f50c)
+2025-07-20T00:17:32.9509828+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 3, pageSize 10. (eb16cd08)
+2025-07-20T00:17:33.0905468+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T00:17:33.0914352+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T00:17:33.0915420+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 4, PageSize: 10 (8bf4f50c)
+2025-07-20T00:17:33.0921902+07:00  [INF] [GetPagedDrinks] Loaded 2 drinks for page 4, pageSize 10. (f2f80cf9)
+2025-07-20T00:17:33.6755942+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T00:17:33.6777720+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T00:17:33.6779363+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 3, PageSize: 10 (8bf4f50c)
+2025-07-20T00:17:33.6790869+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 3, pageSize 10. (eb16cd08)
+2025-07-20T00:17:34.0884167+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T00:17:34.0901664+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T00:17:34.0903888+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 2, PageSize: 10 (8bf4f50c)
+2025-07-20T00:17:34.0923693+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 2, pageSize 10. (66bd377f)
+2025-07-20T00:17:34.2676853+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T00:17:34.2710565+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T00:17:34.2714002+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-20T00:17:34.2733786+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-20T01:04:32.3921705+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-20T01:04:32.4160110+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-20T01:04:33.5467964+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 27.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-20T01:04:33.8475075+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T01:04:33.8582926+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T01:04:33.8599155+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-20T01:04:33.8706593+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-20T01:33:39.9665597+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-20T01:33:40.0073275+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-20T01:33:41.0288955+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T01:33:41.0446786+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T01:33:41.0458414+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-20T01:33:41.0547762+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-20T01:33:41.1091673+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 26°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-20T01:37:18.9936300+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-20T01:37:19.0274654+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-20T01:37:20.3804858+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 26°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-20T01:38:03.0978067+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-20T01:38:03.1266895+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-20T01:38:03.8094867+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 26°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-20T01:38:24.1748858+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-20T01:38:24.1833708+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-20T01:38:24.9105431+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 26°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-20T02:02:36.1136344+07:00  [INF] [GetAllDrinks] Connection opened, State: Open (625e99a8)
+2025-07-20T02:02:36.1297511+07:00  [INF] [GetAllDrinks] Loaded 32 drinks. (93d6d454)
+2025-07-20T02:02:37.2969005+07:00  [INF] [GetTotalDrinks] Connection opened, State: Open (48b8dcf8)
+2025-07-20T02:02:37.3019609+07:00  [INF] [GetTotalDrinks] Query: SELECT COUNT(*) FROM Drink WHERE IsAvailable = 1, Total drinks with IsAvailable = 1: 32 (e3401e4c)
+2025-07-20T02:02:37.3030927+07:00  [INF] [GetPagedDrinks] Connection opened, State: Open, Page: 1, PageSize: 10 (8bf4f50c)
+2025-07-20T02:02:37.3082072+07:00  [INF] [GetPagedDrinks] Loaded 10 drinks for page 1, pageSize 10. (17fe6b28)
+2025-07-20T02:02:37.6312109+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Capuchino
+Thông tin thời tiết hiện tại:
+- Điều kiện: Partly Cloudy
+- Nhiệt độ: 26.1°C
+
+Danh sách đồ uống có sẵn của quán:
+Trà sữa truyền thống, Cà phê sữa đá, Nước cam tươi, Matcha Latte, Capuchino, Hồng trà chanh, Sinh tố bơ, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen, Cà phê đen nóng, Lemon tea, Milo dằm, Trà vải, Soda việt quất, Trà sen vàng, Cà phê caramel, Sinh tố xoài, Trà nhài mật ong, Matcha macchiato, Soda chanh dây, Trà sữa khoai môn, Cà phê kem trứng, Sữa chua việt quất, Milo kem cheese, Trà sữa trân châu đường đen, Cà phê đen nóng, Trà đào cam sả, Sữa tươi trân châu đường đen, Mocha đá xay, Trà đào cam sả, Sữa tươi trân châu đường đen
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)

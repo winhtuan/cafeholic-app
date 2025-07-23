@@ -1,9 +1,9 @@
-﻿<Application x:Class="CAFEHOLIC.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:converters="clr-namespace:CAFEHOLIC.service"
-
-             StartupUri="view/LoginWindown.xaml">
+﻿<Application
+    x:Class="CAFEHOLIC.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="clr-namespace:CAFEHOLIC.service"
+    StartupUri="view/LoginWindown.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -14,6 +14,26 @@
             </ResourceDictionary.MergedDictionaries>
             <converters:BoolToStatusConverter x:Key="BoolToStatusConverter" />
             <converters:BoolToVisibilityInverseConverter x:Key="BoolToVisibilityInverseConverter"/>
+            <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            <Style x:Key="CustomRaisedButton" TargetType="Button" BasedOn="{StaticResource MaterialDesignRaisedButton}">
+                <Setter Property="Padding" Value="10,5"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource MaterialDesignDivider}"/>
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="MinWidth" Value="80"/>
+                <Setter Property="MinHeight" Value="36"/>
+                <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Opacity" Value="0.8"/>
+                    </Trigger>
+                    <Trigger Property="IsPressed" Value="True">
+                        <Setter Property="Opacity" Value="0.6"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

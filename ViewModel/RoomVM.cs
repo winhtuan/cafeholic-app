@@ -1,9 +1,9 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Input;
-using CAFEHOLIC.dao;
 using CAFEHOLIC.DAO;
 namespace CAFEHOLIC.ViewModel
 {
@@ -118,6 +118,19 @@ namespace CAFEHOLIC.ViewModel
             }
         }
 
+        private RoomViewModel? selectedRoom;
+        public RoomViewModel? SelectedRoom
+        {
+            get => selectedRoom;
+            set
+            {
+                if (selectedRoom != value)
+                {
+                    selectedRoom = value;
+                    OnPropertyChanged(nameof(SelectedRoom));
+                }
+            }
+        }
 
         private void LoadRooms()
         {
@@ -126,6 +139,8 @@ namespace CAFEHOLIC.ViewModel
             Rooms.Clear();
             foreach (var r in rooms)
             {
+                Debug.WriteLine($"[DEBUG] RoomId: {r.RoomId}, Name: {r.Name}, IsAvailable: {r.IsAvailable}, " +
+                $"RoomType: {r.RoomType?.Name}, Min: {r.RoomType?.MinCapacity}, Max: {r.RoomType?.MaxCapacity}");
                 Rooms.Add(new RoomViewModel
                 {
                     RoomId = r.RoomId,
@@ -133,6 +148,7 @@ namespace CAFEHOLIC.ViewModel
                     RoomType = r.RoomType?.Name ?? "Unknown",
                     Capacity = $"{r.RoomType?.MinCapacity}–{r.RoomType?.MaxCapacity}",
                     IsAvailable = r.IsAvailable ?? false
+
                 });
             }
         }

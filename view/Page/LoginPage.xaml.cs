@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CAFEHOLIC.dao;
 using CAFEHOLIC.DAO;
 using CAFEHOLIC.Model;
 
@@ -54,7 +54,16 @@ namespace CAFEHOLIC.view.Page
             if (acc != null)
             {
                 AppSession.CurrentUserId = acc.AccId;
-                new HomeWindown().Show();
+                string roleName = acc.Role?.RoleName ?? string.Empty;
+                Debug.WriteLine("RoleName: " + roleName);
+                if (roleName.Equals("Admin", StringComparison.OrdinalIgnoreCase))
+                {
+                    new AdminWindow().Show();
+                }
+                else
+                {
+                    new HomeWindown().Show();
+                }
                 LoginWindown.Close();
             }
             else

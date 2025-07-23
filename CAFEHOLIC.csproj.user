@@ -2,10 +2,28 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="view\AdminWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="view\Dialog\ReservationPopUp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="view\Dialog\UserDialog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="view\HomeWindown.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Page\DrinkEditPage.xaml.cs">
+		<SubType>Code</SubType>
+	</Compile>
+    <Compile Update="view\Page\Admin\AdminPage.xaml.cs">
+		<SubType>Code</SubType>
+	</Compile>
+    <Compile Update="view\Page\BookingManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Page\EditBookingWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="view\Page\ForgotPasswordPage.xaml.cs">
@@ -17,13 +35,34 @@
     <Compile Update="view\Page\LoginPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="view\Page\Admin\ManageStaffPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Page\Admin\ManageUserPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Page\MenuPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Page\DrinkManagementPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="view\Page\RegisterPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="view\Page\ResetPasswordPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="view\Page\RoomEditPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Page\RoomManagementPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="view\Page\RoomPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="view\Page\RoomTypeEditPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="view\Page\VerifyPage.xaml.cs">

@@ -1,0 +1,125 @@
+2025-07-18T21:13:11.6334620+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Drink 1
+Thông tin thời tiết hiện tại:
+- Điều kiện: Clear
+- Nhiệt độ: 33.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Drink 1, Drink 2, Drink 3, Drink 4, Drink 5, Drink 6, Drink 7, Drink 8, Drink 9, Drink 10, Drink 11, Drink 12, Drink 13, Drink 14, Drink 15
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-18T21:13:16.2761292+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Drink 1
+Thông tin thời tiết hiện tại:
+- Điều kiện: Clear
+- Nhiệt độ: 33.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Drink 1, Drink 2, Drink 3, Drink 4, Drink 5, Drink 6, Drink 7, Drink 8, Drink 9, Drink 10, Drink 11, Drink 12, Drink 13, Drink 14, Drink 15
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-18T21:13:18.2257124+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Drink 1
+Thông tin thời tiết hiện tại:
+- Điều kiện: Clear
+- Nhiệt độ: 33.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Drink 1, Drink 2, Drink 3, Drink 4, Drink 5, Drink 6, Drink 7, Drink 8, Drink 9, Drink 10, Drink 11, Drink 12, Drink 13, Drink 14, Drink 15
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-18T21:14:56.5123853+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Drink 1
+Thông tin thời tiết hiện tại:
+- Điều kiện: Clear
+- Nhiệt độ: 33.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Drink 1, Drink 2, Drink 3, Drink 4, Drink 5, Drink 6, Drink 7, Drink 8, Drink 9, Drink 10, Drink 11, Drink 12, Drink 13, Drink 14, Drink 15
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-18T21:15:14.7931649+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Drink 1
+Thông tin thời tiết hiện tại:
+- Điều kiện: Clear
+- Nhiệt độ: 33.4°C
+
+Danh sách đồ uống có sẵn của quán:
+Drink 1, Drink 2, Drink 3, Drink 4, Drink 5, Drink 6, Drink 7, Drink 8, Drink 9, Drink 10, Drink 11, Drink 12, Drink 13, Drink 14, Drink 15
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-18T22:05:51.5515973+07:00  [INF] Gửi prompt đến Gemini: "Bạn là trợ lý gợi ý đồ uống cho khách hàng. Nhiệm vụ của bạn là đề xuất 3 món đồ uống phù hợp nhất dựa trên thông tin được cung cấp.
+
+Thông tin khách hàng:
+- Các món yêu thích: Drink 1
+Thông tin thời tiết hiện tại:
+- Điều kiện: Clear
+- Nhiệt độ: 30.1°C
+
+Danh sách đồ uống có sẵn của quán:
+Drink 1, Drink 2, Drink 3, Drink 4, Drink 5, Drink 6, Drink 7, Drink 8, Drink 9, Drink 10, Drink 11, Drink 12, Drink 13, Drink 14, Drink 15
+
+Yêu cầu:
+1. Gợi ý 3 món đồ uống từ danh sách trên, ưu tiên phù hợp với sở thích của khách hàng và điều kiện thời tiết hiện tại.
+2. Viết thêm một câu dẫn ngắn gọn (bằng tiếng Việt) để giới thiệu danh sách gợi ý này đến người dùng.
+
+Định dạng phản hồi **bắt buộc phải là JSON** theo cấu trúc sau:
+{
+  \"suggestionText\": \"[Câu dẫn của bạn]\",
+  \"drinks\": [\"[Tên đồ uống 1]\", \"[Tên đồ uống 2]\", \"[Tên đồ uống 3]\"]
+}" (db7d7a73)
+2025-07-18T22:16:51.3011897+07:00  [INF] Sending SMS to +84123456789: Your verification code is: 716479. Please use this code to verify your phone number.from++19069706798 (3f63a3cd)
+2025-07-18T22:17:12.1849312+07:00  [INF] Sending SMS to +84363602027: Your verification code is: 622837. Please use this code to verify your phone number.from++19069706798 (21df02b9)
+2025-07-18T22:18:15.0798521+07:00  [INF] Sending SMS to +84375622474: Your verification code is: 680814. Please use this code to verify your phone number.from++19069706798 (c6989af9)
+2025-07-18T22:18:38.6336884+07:00  [INF] Tạo người dùng mới với số điện thoại: "0375622474" (7bede791)
+2025-07-18T22:18:38.6524071+07:00  [INF] Người dùng mới đã được tạo với ID: 6 (f2923e04)

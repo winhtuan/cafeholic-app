@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using CAFEHOLIC.DAO;
-
+using CAFEHOLIC.Model;
 namespace CAFEHOLIC.view.Page
 {
     public partial class ResetPasswordPage : System.Windows.Controls.Page
