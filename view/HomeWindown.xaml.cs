@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using CAFEHOLIC.view.Page;
+using CAFEHOLIC.view.Page.UserPage;
 
 namespace CAFEHOLIC.view
 {
@@ -45,7 +46,7 @@ namespace CAFEHOLIC.view
 
         private void ProfilePage_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new ProfilePage());
+            MainFrame.Navigate(new ProfileUser());
         }
     }
 }
